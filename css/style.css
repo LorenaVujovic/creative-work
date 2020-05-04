@@ -19,7 +19,7 @@ body {
   color:#fff; 
 }
 .section-portfolio{
-  position: static;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   left:0;
