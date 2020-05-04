@@ -1,0 +1,112 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<!--<div class="spacer"> spacer</div>
+
+<div class="section-1"
+      data-0="position: !static; "
+      
+     >
+  <h1 style="text-align:center;"
+      data-200p="opacity: 0;"
+      data-250p="opacity: 1;"
+      data-300p="opacity: 0"
+      data-center-bottom="opacity: 1;"
+      data-bottom="opacity: 0;"    
+      >Prvi text</h1>
+   </div>
+
+<div class="spacer"> spacer</div>-->
+<div id="skrollr-body"></div>
+
+<div id="anchor">
+  <div class="section-2"
+        data-0="position: !static; display:!none "
+        data-top="position: !fixed; opacity: 0; display:!block "
+        data-100p="opacity: 1; display: !block" 
+       data-anchor-target = "#anchor">
+    
+    <div id="frejm1" class="frejm"
+         data-300p="left[sqrt]: 0vw;"
+         data-450p="left[sqrt]:-100vw;"
+         >
+    
+      <div class="s2c1">
+        <img src="images/portfolio-1.png" 
+             style="width:100%;"/>
+        <div class="curtain"
+             data-0 ="height: 100vh;"
+             data-200p="height: 0vh;"
+             data-anchor-target = "#anchor"
+             >
+        </div>  
+      </div>
+
+      <div  class="s2c1 d-flex flex-column justify-content-between align-items-start">
+        <div class="w-50 p-5">
+            <h1>JOEFALK / 1850.</h1>
+            <p>
+                A garment brand for products made in Germany. We developed the branding strategy, did the web design, 
+                created the online shop, managed photo- and video-shoots, created product brochures for the international market and wrote several texts.
+            </p>
+        </div>
+
+        <img src="images/portfolio-2.png" 
+             style="width:100%;"/>
+        <div class="curtain"       
+             data-100p ="height: 100vh;"
+             data-300p="height: 0vh;"
+             data-anchor-target = "#anchor"
+          >
+        </div>  
+      </div>
+    </div>
+  
+    <div id="frejm2" class="frejm"
+         data-300p="left[outCubic]: 100vw;"
+         data-450p="left[outCubic]: 00vw;" 
+         >
+    
+      <div class="s2c1 d-flex flex-column justify-content-between align-items-start bg-white text-dark" style="">
+
+        <img src="images/portfolio-3.jpg" 
+             style="width:100%;"/>
+        <div class="w-50 p-5">
+            <h1>the GERMAN BAKERS</h1>
+            <p>
+                A catering concept for the airline industry. 
+                We developed the whole branding, the design for the product catalogue, stationary and developed a sales & marketing strategy.
+            </p>
+        </div>
+        <div class="curtain"
+             data-0 ="height: 100vh;"
+             data-200p="height: 0vh;" 
+             data-anchor-target = "#anchor"
+             >
+        </div>  
+      </div>
+
+      <div  class="s2c1">
+        <img src="images/portfolio-4.jpg" 
+             style="width:100%;"/>
+        <div class="curtain"       
+             data-100p ="height: 100vh;"
+             data-300p="height: 0vh;"
+             data-anchor-target = "#anchor"
+          >
+        </div>  
+      </div>
+    </div>
+       
+  </div>    
+
+</div>
+
+<script>
+    var s = skrollr.init({
+        forceHeight:true
+        //, skrollrBody:'anchor'
+    });
+</script>
+{% endblock %}

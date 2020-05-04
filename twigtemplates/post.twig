@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% set slug = _GET['1'] %}
+{% set Post = fetch("Post", {id:slug})[0] %}
+{% block title %} - {{Post.Title}}{% endblock %}
+{% block description %}{{Post.Description}}{% endblock %}
+{% block image %}{{_BASE}}img/{{Post.Image}}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <div class="card post border-0" style="width: 100%;">
+        {% if Post.Image %} 
+        <img class="card-img-top" src="img/{{Post.Image}}" alt="{{Post.Title}}">
+         {% endif %}
+        <div class="card-body">
+          <span class="badge badge-primary float-right">Posted at {{Post.Date}}</span>
+          <h2 class="card-title">{{Post.Title}}</h2>
+          <div class="card-text">{{Post.Body | raw}}</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% include 'comments.twig' %}
+{% endblock %}
+
+{% block last %}
+<script>
+$('.post blockquote').addClass('blockquote')
+$('.post blockquote > footer').addClass("blockquote-footer")
+</script>
+{% endblock %}

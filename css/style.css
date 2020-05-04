@@ -1,0 +1,62 @@
+body {
+  margin:0;
+  background-color:#000;
+}
+#anchor {
+  height:600vh;
+}
+.spacer {
+  height: 100vh;
+  background-color: #00f; 
+}
+.section-1{
+  position: static;
+  height: 100vh;
+  width: 100vw;
+  left:0;
+  top:0;
+  background-color:#000;
+  color:#fff; 
+}
+.section-2{
+  position: static;
+  height: 100vh;
+  width: 100vw;
+  left:0;
+  top:0;
+  background-color:#000;
+  color:#fff; 
+  
+}
+
+.s2c1 {
+  background-color:#000;
+  width:50vw;
+  min-height:100vh;
+  position: relative;
+}
+.curtain {
+  background-color: #000; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  right:0;
+  min-height: 0vh;
+}
+.frejm {
+  position:absolute;
+  display: flex;
+  width:100vw;
+  height:100vh;  
+  top:0;
+}
+#frejm1{
+  left:0;
+}
+
+#frejm2{
+  position:absolute;
+  display: flex;
+  left:80vw;
+ 
+}
