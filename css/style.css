@@ -3,7 +3,7 @@ body {
   background-color:#000;
 }
 #anchor {
-  height:600vh;
+  height:800vh;
 }
 .spacer {
   height: 100vh;
@@ -18,7 +18,7 @@ body {
   background-color:#000;
   color:#fff; 
 }
-.section-2{
+.section-portfolio{
   position: static;
   height: 100vh;
   width: 100vw;
@@ -57,6 +57,39 @@ body {
 #frejm2{
   position:absolute;
   display: flex;
-  left:80vw;
- 
+  left:80vw; 
+}
+#frejm3{
+    position:absolute;
+    display: flex;
+    left:80vw; 
+}
+
+.frame1-text-padd {
+  padding: 5rem !important;
+}
+
+.frame2-text-padd {
+    padding: 4rem 8rem !important;
+}
+
+.w-lg-75 {
+    width: 75%;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .s2c1 {
+        width:100vw;
+      }
+      .w-lg-50 {
+        width: 98%;
+    }
+    .frame1-text-padd {
+        padding: 3rem !important;
+      }
+      
+      .frame2-text-padd {
+          padding: 3rem !important;
+      }
 }
