@@ -1,29 +1,257 @@
 {% extends "base.twig" %}
-{% block description %}All posts{% endblock %}
-{% block title %} - All posts{% endblock %}
-{% block image %}{{_BASE}}img/buildcon1024x1024.png{% endblock %}
 
 {% block content %}
 
-<div class="container">
-  <h1 class="text-center my-4">All posts</h1>
-  <div class="row">
-    {% for item in fetch("Post") if item.Publish == 'true'%}
-    <div class="col-xl-4 col-md-6 col-sm-12">
+<!--<div class="spacer"> spacer</div>
 
-      <div class="card" style="width: 100%;">
-        <img class="card-img-top" src="img/{{item.Image}}" alt="{{item.Title}}">
-        <div class="card-body">
-          <h5 class="card-title text-truncate">{{item.Title}}</h5>
-          <p class="card-text" style="height:6rem; overflow:hidden">
-          {{item.Short}}
-          </p>
-          <a href="post/{{item.Slug}}" class="btn btn-primary stretched-link">Read more...</a>
+<div class="section-1"
+      data-0="position: !static; "
+      
+     >
+  <h1 style="text-align:center;"
+      data-200p="opacity: 0;"
+      data-250p="opacity: 1;"
+      data-300p="opacity: 0"
+      data-center-bottom="opacity: 1;"
+      data-bottom="opacity: 0;"    
+      >Prvi text</h1>
+   </div>
+
+<div class="spacer"> spacer</div>-->
+<div id="skrollr-body">
+
+{% include 'intro.twig' %}
+
+<!-- second section -->
+    <div class="container-fluid" style="height: 100vh;">
+        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+            <h2 class="scnd-section-text white" 
+                data-bottom-top="opacity[swing]:0; transform:translateY(150px)"
+                data-center="opacity[swing]:1; transform:translateY(0px)"
+                data-top-center="opacity[swing]:0">
+                Your agency for
+            </h2>
+            <h2 class="scnd-section-text white font-weight-bold"
+                data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
+                data-center="opacity[swing]:1; transform:translateY(0px)"
+                data-top-center="opacity[swing]:0;">
+                branding and web design
+            </h2>
         </div>
-      </div>
     </div>
-    {% endfor %}
-  </div>
+<!-- end second section -->
+
+<!-- third section -->
+    <div class="third-section padding  container-fluid bg-white" style="">
+        <div class="row align-items-top" style="">
+            <div class="col-12 col-md-6">
+                <div class="my-auto">
+                <h3 class="py-4"
+                    data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
+                    data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                   
+                    >
+                        Welcome to <br> 
+                    <b
+                    data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
+                    data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                    >
+                        the creativework co.
+                    </b> 
+                </h3>
+                <p
+                    data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
+                    data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                >
+                    We are a collective with diverse backgrounds that comes together to bring our best into each of our projects. 
+                    We are designers, developers, photographers, artists and business people. We connect the dots between nice colors 
+                    and their effectiveness for your company.
+                </p>
+                <p
+                    data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
+                    data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                >
+                    Our clients. Start ups, established businesses, shops, bars & restaurants, freelancers, NGO's and publish institutions.
+                </p>
+                </div>
+            </div>
+             <div class="col-12 col-md-6">
+                <h3 class="py-4 d-none d-md-inline">&nbsp;<br>&nbsp; </h3>
+                <p
+                    data-bottom="opacity:0;"
+                    data--20p-bottom="opacity:0; transform: translate3d(10px, 10px, 0);" 
+                    data--25p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);"  
+                >
+                    Together with our collective we've fulfilled projects all around the world, 
+                    including places like London, Den Haag, Frankfurt, Cologne, Belgrade, Dubai, Abu Dhabi and Seoul.
+                </p>
+                <p
+                    data-bottom="opacity:0;"
+                    data--20p-bottom="opacity:0; transform: translate3d(10px, 10px, 0);" 
+                    data--25p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                >
+                    The branding and web design agency that lets your business look great. Based in 
+                    <span>Munich, Cologne, Belgrade and Dubai.</span>
+                </p>
+            </div>       
+        </div>
+    </div>
+
+<!-- end third section -->
+
+<!-- fourtyh section -->
+    <div class="container-fluid fourth-section"  style="scroll-behavior:smooth" id="projects">
+        <div class="row white flex-column align-items-center justify-content-center " style="height:100%;">
+            <h2
+                data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
+                data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                >our</h2>
+            <h2 class="text-transform-uppercase"
+                data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
+                data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                >projects</h2>
+        </div>
+    </div>   
+<!-- end fourth section -->
+
+
+
+<!-- fifth section -->
+{% set Projects = fetch("Projects") %}
+
+    <div id="anchor" style="height:{{250 + Projects|length * 150 }}vh;">
+
+    </div>
+<!-- end fifth section -->
+
+
+<!-- sixth section -->
+    <div class="container-fluid sixth-section white d-flex flex-column  align-items-center justify-content-center">
+        <div class="row">
+            <div class="col text-center">
+                <h2
+                    data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
+                    data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                    >service
+                </h2>
+                <h2
+                    data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
+                    data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);"                 
+                    >MADE IN GERMANY
+                </h2>
+            </div>
+        </div>
+    </div>
+<!-- end sixth section -->
+<!-- footer -->
+    {% include 'footer.twig' with {'boja' : '#DA628A'} %}
+<!-- end footer -->
 </div>
 
+
+
+
+{# FIXED JE VAN SKROLLR BADIJA #}
+
+        <div class="section-portfolio"
+            data-0="opacity: 0; display:!none "
+            data-0-top="opacity: 0; display:!block "
+            data--200p-top="opacity: 1; display:!block" 
+            {# izlaz #}
+            data--{{150 + Projects|length * 150 }}p-top="opacity: 1; display:!block; top:0vh" 
+            data--{{250 + Projects|length * 150 }}p-top="opacity: 0; display:!none; top:-100vh" 
+
+            data-anchor-target = "#anchor">
+        
+
+{% for item in Projects %}     
+    {% if (loop.index0 is even) %}
+
+            <div id="frejm{{loop.index}}" class="frejm"
+                {% if not loop.first %} {# samo prvi frejm ne ulazi s desna #}
+                    data--{{150 + loop.index0*150}}p-top="left[outCubic]: 100vw;"
+                    data--{{300 + loop.index0*150}}p-top="left[outCubic]: 00vw;" 
+                {% endif %} 
+
+                {% if not loop.last %} {# samo zadnji frejm ne izlazi ulijevo #}
+                    data--{{305 + loop.index0*150}}p-top="left: 0vw;"
+                    data--{{430 + loop.index0*150}}p-top="left:-100vw;"
+                {% endif %}                   
+
+                data-anchor-target = "#anchor"
+                >
+            
+                <div class="s2c1 d-none d-lg-block">
+                    <img src="img/{{item.LargeImage}}" 
+                        style="width:100%;"/>
+                    {% if loop.first %}
+                        <div class="curtain"
+                            data-0-top ="height: 100vh;"
+                            data--200p-top="height: 0vh;"
+                            data-anchor-target = "#anchor">
+                        </div>  
+                    {% endif %} 
+                </div>
+
+                <div  class="s2c1 d-flex flex-column justify-content-between align-items-start">
+                    <div class="w-lg-50 frame1-text-padd">
+                        <h1>{{item.Title}}</h1>
+                        <p style="white-space:pre-wrap">{{item.Text}}</p>
+                    </div>
+                    <img src="img/{{item.SmallImage}}" style="width:100%;" />
+
+                    {% if loop.first %}
+                        <div class="curtain"       
+                            data--100p-top ="height: 100vh;"
+                            data--300p-top="height: 0vh;"
+                            data-anchor-target = "#anchor">
+                        </div>  
+                    {% endif %} 
+                </div>
+            </div>
+    {% else %}   
+
+            <div id="frejm{{loop.index}}" class="frejm"
+                {% if not loop.first %} {# samo prvi frejm ne ulazi s desna #}
+                    data--{{150 + loop.index0*150}}p-top="left[outCubic]: 100vw;"
+                    data--{{300 + loop.index0*150}}p-top="left[outCubic]: 00vw;" 
+                {% endif %}         
+
+                {% if not loop.last %} {# samo zadnji frejm ne izlazi ulijevo #}
+                    data--{{305 + loop.index0*150}}p-top="left: 0vw;"
+                    data--{{430 + loop.index0*150}}p-top="left:-100vw;"
+                {% endif %}                   
+                data-anchor-target = "#anchor"
+                >
+            
+                <div class="s2c1 bg-white text-dark" style="">
+                    <img src="img/{{item.SmallImage}}" style="width:100%;"/>                   
+                    <div class="w-lg-50 frame2-text-padd">
+                        <h1>{{item.Title}}</h1>
+                        <p>{{item.Text}}</p>
+                    </div>
+                </div>
+
+                <div  class="s2c1 d-none d-lg-block">
+                    <img src="img/{{item.LargeImage}}" style="width:100%;"/>               
+                </div>
+            </div>
+    {% endif %}   
+{% endfor %}
+
+
+
+        
+        </div>    
+{# END FIXED JE VAN SKROLLR BADIJA #}
+
+
+
+
+<script>
+    var s = skrollr.init({
+        forceHeight:false
+        //, skrollrBody:'anchor'
+    });
+</script>
 {% endblock %}

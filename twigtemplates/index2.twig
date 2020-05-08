@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+{% block description %}All posts{% endblock %}
+{% block title %} - All posts{% endblock %}
+{% block image %}{{_BASE}}img/buildcon1024x1024.png{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1 class="text-center my-4">All posts</h1>
+  <div class="row">
+    {% for item in fetch("Post") if item.Publish == 'true'%}
+    <div class="col-xl-4 col-md-6 col-sm-12">
+
+      <div class="card" style="width: 100%;">
+        <img class="card-img-top" src="img/{{item.Image}}" alt="{{item.Title}}">
+        <div class="card-body">
+          <h5 class="card-title text-truncate">{{item.Title}}</h5>
+          <p class="card-text" style="height:6rem; overflow:hidden">
+          {{item.Short}}
+          </p>
+          <a href="post/{{item.Slug}}" class="btn btn-primary stretched-link">Read more...</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

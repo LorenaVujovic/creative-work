@@ -18,132 +18,239 @@
    </div>
 
 <div class="spacer"> spacer</div>-->
-<div id="skrollr-body"></div>
+<div id="skrollr-body">
+{% include 'intro.twig' %}
 
-<div id="anchor">
+<!-- second section -->
+    <div class="container-fluid" style="height: 100vh;">
+        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+            <h2 class="scnd-section-text white" 
+                data-bottom-top="opacity[swing]:0; transform:translateY(150px)"
+                data-center="opacity[swing]:1; transform:translateY(0px)"
+                data-top-center="opacity[swing]:0">
+                Your agency for
+            </h2>
+            <h2 class="scnd-section-text white font-weight-bold"
+                data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
+                data-center="opacity[swing]:1; transform:translateY(0px)"
+                data-top-center="opacity[swing]:0;">
+                branding and web design
+            </h2>
+        </div>
+    </div>
+<!-- end second section -->
 
-    <div class="section-portfolio"
-        data-0="position: !static; display:!none "
-        data-top="position: !fixed; opacity: 0; display:!block "
-        data-300p="opacity: 1; display: !block" 
-        data-anchor-target = "#anchor">
+<!-- third section -->
+    <div class="third-section padding  container-fluid bg-white" style="">
+        <div class="row align-items-top" style="">
+            <div class="col col-md-6">
+                <div class="my-auto">
+                <h3 class="py-4"
+                    data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
+                    data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                   
+                    >
+                        Welcome to <br> 
+                    <b
+                    data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
+                    data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                    >
+                        the creativework co.
+                    </b> 
+                </h3>
+                <p
+                    data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
+                    data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                >
+                    We are a collective with diverse backgrounds that comes together to bring our best into each of our projects. 
+                    We are designers, developers, photographers, artists and business people. We connect the dots between nice colors 
+                    and their effectiveness for your company.
+                </p>
+                <p
+                    data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
+                    data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                >
+                    Our clients. Start ups, established businesses, shops, bars & restaurants, freelancers, NGO's and publish institutions.
+                </p>
+                </div>
+            </div>
+             <div class="col col-md-6">
+                <h3 class="py-4">&nbsp;<br>&nbsp; </h3>
+                <p
+                    data-bottom="opacity:0;"
+                    data--20p-bottom="opacity:0; transform: translate3d(10px, 10px, 0);" 
+                    data--25p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);"  
+                >
+                    Together with our collective we've fulfilled projects all around the world, 
+                    including places like London, Den Haag, Frankfurt, Cologne, Belgrade, Dubai, Abu Dhabi and Seoul.
+                </p>
+                <p
+                    data-bottom="opacity:0;"
+                    data--20p-bottom="opacity:0; transform: translate3d(10px, 10px, 0);" 
+                    data--25p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                >
+                    The branding and web design agency that lets your business look great. Based in 
+                    <span>Munich, Cologne, Belgrade and Dubai.</span>
+                </p>
+            </div>       
+        </div>
+    </div>
+
+<!-- end third section -->
+
+<!-- fourtyh section -->
+    <div class="container-fluid fourth-section"  style="">
+        <div class="row white flex-column align-items-center justify-content-center " style="height:100%;">
+            <h2>our</h2>
+            <h2 class="text-transform-uppercase">projects</h2>
+        </div>
+    </div>   
+<!-- end fourth section -->
+
+<!-- fifth section -->
+
+    <div id="anchor" style="height:700vh;">
+
+        <div class="section-portfolio"
+            data-0="opacity: 0; display:!none "
+            data-0-top="opacity: 0; display:!block "
+            data--200p-top="opacity: 1; display:!block" 
+            {# izlaz #}
+            data--600p-top="opacity: 1; display:!block; top:0vh" 
+            data--700p-top="opacity: 0; display:!none; top:-100vh" 
+
+            data-anchor-target = "#anchor">
+        
+            <div id="frejm1" class="frejm"
+                data--305p-top="left: 0vw;"
+                data--430p-top="left:-100vw;"
+                data-anchor-target = "#anchor"
+                >
+            
+                <div class="s2c1 d-none d-lg-block">
+                    <img src="images/portfolio-1.png" 
+                        style="width:100%;"/>
+                    <div class="curtain"
+                        data-0-top ="height: 100vh;"
+                        data--200p-top="height: 0vh;"
+                        data-anchor-target = "#anchor"
+                        >
+                    </div>  
+                </div>
+
+                <div  class="s2c1 d-flex flex-column justify-content-between align-items-start">
+                    <div class="w-lg-50 frame1-text-padd">
+                        <h1>JOEFALK / 1850.</h1>
+                        <p>
+                            A garment brand for products made in Germany. We developed the branding strategy, did the web design, 
+                            created the online shop, managed photo- and video-shoots, created product brochures for the international market and wrote several texts.
+                        </p>
+                    </div>
+                    <img src="images/portfolio-2.png" style="width:100%;" />
+                    
+                    <div class="curtain"       
+                        data--100p-top ="height: 100vh;"
+                        data--300p-top="height: 0vh;"
+                        data-anchor-target = "#anchor"
+                    >
+                    </div>  
+                </div>
+            </div>
     
-        <div id="frejm1" class="frejm"
-            data-305p="left: 0vw;"
-            data-430p="left:-100vw;"
-            data-anchor-target = "#anchor"
-            >
-        
-            <div class="s2c1 d-none d-lg-block">
-                <img src="images/portfolio-1.png" 
-                    style="width:100%;"/>
-                <div class="curtain"
-                    data-0 ="height: 100vh;"
-                    data-200p="height: 0vh;"
-                    data-anchor-target = "#anchor"
+            <div id="frejm2" class="frejm"
+                data--300p-top="left[outCubic]: 100vw;"
+                data--450p-top="left[outCubic]: 00vw;" 
+
+                data--455p-top="left: 0vw;"
+                data--580p-top="left:-100vw;"
+                data-anchor-target = "#anchor"
+                >
+            
+                <div class="s2c1 bg-white text-dark" style="">
+                    <img src="images/portfolio-3.jpg" style="width:100%;"/>                   
+                    <div class="w-lg-50 frame2-text-padd">
+                        <h1>the GERMAN BAKERS</h1>
+                        <p>
+                            A catering concept for the airline industry. 
+                            We developed the whole branding, the design for the product catalogue, stationary and developed a sales & marketing strategy.
+                        </p>
+                    </div>
+                    <div class="curtain"
+                        data-0-top ="height: 100vh;"
+                        data--200p-top="height: 0vh;" 
+                        data-anchor-target = "#anchor"
+                        >
+                    </div>  
+                </div>
+
+                <div  class="s2c1 d-none d-lg-block">
+                    <img src="images/portfolio-4.jpg" style="width:100%;"/>               
+                    <div class="curtain"       
+                        data--100p-top ="height: 100vh;"
+                        data--300p-top="height: 0vh;"
+                        data-anchor-target = "#anchor"
                     >
-                </div>  
+                    </div>  
+                </div>
             </div>
 
-            <div  class="s2c1 d-flex flex-column justify-content-between align-items-start">
-                <div class="w-lg-50 frame1-text-padd">
-                    <h1>JOEFALK / 1850.</h1>
-                    <p>
-                        A garment brand for products made in Germany. We developed the branding strategy, did the web design, 
-                        created the online shop, managed photo- and video-shoots, created product brochures for the international market and wrote several texts.
-                    </p>
-                </div>
-                <img src="images/portfolio-2.png" style="width:100%;" />
-                   
-                <div class="curtain"       
-                    data-100p ="height: 100vh;"
-                    data-300p="height: 0vh;"
-                    data-anchor-target = "#anchor"
+            <div id="frejm3" class="frejm"
+                data--450p-top="left[outCubic]: 100vw;"
+                data--600p-top="left[outCubic]: 00vw;"
+                data-anchor-target = "#anchor"
                 >
-                </div>  
+            
+                <div class="s2c1 d-none d-lg-block">
+                    <img src="images/portfolio-5.png" 
+                        style="width:100%;"/>
+                    <div class="curtain"
+                        data-0 ="height: 100vh;"
+                        data--200p-top="height: 0vh;"
+                        data-anchor-target = "#anchor"
+                        >
+                    </div>  
+                </div>
+
+                <div  class="s2c1 d-flex flex-column justify-content-between align-items-start">
+                    <div class="w-lg-50 frame1-text-padd">
+                        <h1>LA JOIE</h1>
+                        <p>
+                            A French bistro concept for the German market. 
+                            We supported this new concept with POS and packaging design as well as with the creation of a pitch deck and start up advisory.                    
+                        </p>
+                    </div>
+                    <img src="images/portfolio-6.png" style="width:100%;" />
+                    
+                    <div class="curtain"       
+                        data--100p-top ="height: 100vh;"
+                        data--300p-top="height: 0vh;"
+                        data-anchor-target = "#anchor"
+                    >
+                    </div>  
+                </div>
+            </div>
+        
+        </div>    
+
+    </div>
+<!-- end fifth section -->
+
+<!-- sixth section -->
+    <div class="container-fluid sixth-section white d-flex flex-column  align-items-center justify-content-center">
+        <div class="row">
+            <div class="col text-center">
+                <h2>service</h2>
+                <h2>MADE IN GERMANY</h2>
             </div>
         </div>
-  
-        <div id="frejm2" class="frejm"
-            data-300p="left[outCubic]: 100vw;"
-            data-450p="left[outCubic]: 00vw;" 
-
-            data-455p="left: 0vw;"
-            data-580p="left:-100vw;"
-            data-anchor-target = "#anchor"
-            >
-        
-            <div class="s2c1 bg-white text-dark" style="">
-                <img src="images/portfolio-3.jpg" style="width:100%;"/>                   
-                <div class="w-lg-50 frame2-text-padd">
-                    <h1>the GERMAN BAKERS</h1>
-                    <p>
-                        A catering concept for the airline industry. 
-                        We developed the whole branding, the design for the product catalogue, stationary and developed a sales & marketing strategy.
-                    </p>
-                </div>
-                <div class="curtain"
-                    data-0 ="height: 100vh;"
-                    data-200p="height: 0vh;" 
-                    data-anchor-target = "#anchor"
-                    >
-                </div>  
-            </div>
-
-            <div  class="s2c1 d-none d-lg-block">
-                <img src="images/portfolio-4.jpg" style="width:100%;"/>               
-                <div class="curtain"       
-                    data-100p ="height: 100vh;"
-                    data-300p="height: 0vh;"
-                    data-anchor-target = "#anchor"
-                >
-                </div>  
-            </div>
-        </div>
-
-        <div id="frejm3" class="frejm"
-            data-450p="left[outCubic]: 100vw;"
-            data-600p="left[outCubic]: 00vw;"
-            data-anchor-target = "#anchor"
-            >
-        
-            <div class="s2c1 d-none d-lg-block">
-                <img src="images/portfolio-5.png" 
-                    style="width:100%;"/>
-                <div class="curtain"
-                    data-0 ="height: 100vh;"
-                    data-200p="height: 0vh;"
-                    data-anchor-target = "#anchor"
-                    >
-                </div>  
-            </div>
-
-            <div  class="s2c1 d-flex flex-column justify-content-between align-items-start">
-                <div class="w-lg-50 frame1-text-padd">
-                    <h1>LA JOIE</h1>
-                    <p>
-                        A French bistro concept for the German market. 
-                        We supported this new concept with POS and packaging design as well as with the creation of a pitch deck and start up advisory.                    
-                    </p>
-                </div>
-                <img src="images/portfolio-6.png" style="width:100%;" />
-                   
-                <div class="curtain"       
-                    data-100p ="height: 100vh;"
-                    data-300p="height: 0vh;"
-                    data-anchor-target = "#anchor"
-                >
-                </div>  
-            </div>
-        </div>
-       
-    </div>    
-
-</div>
-
+    </div>
+<!-- end sixth section -->
+<!-- footer -->
+    {% include 'footer.twig' with {'boja' : '#DA628A'} %}
+<!-- end footer -->
 <script>
     var s = skrollr.init({
-        forceHeight:true
+        forceHeight:false
         //, skrollrBody:'anchor'
     });
 </script>

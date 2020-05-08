@@ -1,0 +1,25 @@
+{% set w=800 %}
+{% set h=612 %}
+
+<div class="bg-white d-flex flex-column align-items-center justify-content-center" id="intro" style="height:100vh">
+	<div class="container" style="overflow: hidden;">
+		<iframe id="iframe_intro" src="animacije/intro2/intro3/index.html" style="overflow: hidden; border:0; transform-origin:left top" 
+        width="{{w}}px" height="{{h}}px">
+		</iframe>
+	</div>
+</div>
+
+<script>
+function displayWindowSize(){
+  var frame_width = {{w}}
+  var frame_heigth = {{h}}
+  var f = document.getElementById('iframe_intro')
+  var parentW = f.parentElement.clientWidth
+  var scale = (parentW-30)/frame_width;
+  f.style.transform=`scale(${scale})`
+  f.parentElement.style.height = `${frame_heigth*scale}px`      
+}
+window.addEventListener("resize", displayWindowSize);
+displayWindowSize();
+</script>
+

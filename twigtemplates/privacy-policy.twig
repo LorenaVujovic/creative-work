@@ -1,0 +1,91 @@
+{% extends "base.twig" %}
+{% block content %}
+<div id="skrollr-body">
+
+    <!-- first section -->
+    <div class="container-fluid first-section-legal white">
+        <div class="row">
+            <div class="col col-md-6 offset-md-3 text-center">
+                <h1 class="pb-5"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+
+                >Privacy Policy</h1>
+                <p class="py-5"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+                    data--85p-bottom-top="opacity:1;" 
+                    data--100p-bottom-top="opacity:0;" 
+                >
+                    Contact<br>
+                    <a href="mailto:aloha@thecreativework.co" class="white">E-Mail: aloha@thecreativework.co</a>
+                </p>
+                <p class="pb-5"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+                    data--85p-bottom-top="opacity:1;" 
+                    data--100p-bottom-top="opacity:0;" 
+                >
+                information pursuant to German § 5 TMG & responsible <br> 
+                for the content according to German § 55(2) RStV
+                </p>
+                <p class="pb-5"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+                    data--85p-bottom-top="opacity:1;" 
+                    data--100p-bottom-top="opacity:0;" 
+                >
+                Falk & Isakovic GbR <br>
+                </p>
+                <p class="pb-5"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+                    data--85p-bottom-top="opacity:1;" 
+                    data--100p-bottom-top="opacity:0;" 
+                >
+                    Dragan Isakovic the creativework co. <br>
+                    Brantstraße 6 80687 München
+                </p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <!-- end first section -->
+
+    {% set Privacy = fetch("Privacy") %}
+    {% for item in Privacy %}
+        <!-- second section -->
+            <div class="container-fluid section-legal-{{ cycle(['0', '1', '2'], loop.index0) }} d-flex flex-column justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col col-md-6 offset-md-3">
+                        <h2 class="font-weight-bold pb-5"
+                            data-bottom-top="opacity:0;"
+                            data--25p-bottom-top="opacity:1;" 
+                            data-35p-top-bottom="opacity:1;" 
+                            data-60-top-bottom="opacity:0;"                   
+                        >{{item.Title}}</h2>
+                        <p style="white-space: pre-wrap;"
+                            data-bottom-top="opacity:0;"
+                            data--25p-bottom-top="opacity:1;" 
+                            data-35p-top-bottom="opacity:1;" 
+                            data-60-top-bottom="opacity:0;"                   
+                        >{{item.Text}}</p>                
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        <!-- end second section -->
+    {% endfor %}
+
+    <!-- footer -->
+        {% include 'footer.twig' with {'boja' : '#79B2C6'}  %}
+    <!-- end footer -->
+</div>
+
+<script>
+    var s = skrollr.init({
+        forceHeight:false
+        //, skrollrBody:'anchor'
+    });
+</script>
+{% endblock %}
