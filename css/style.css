@@ -11,6 +11,12 @@ body {
 body {
   margin:0;
   background-color:#000;
+  font-family: 'Montserrat';
+  color: #7E7E7E;
+}
+nav {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 .white {
     color: #fff;
@@ -35,8 +41,7 @@ ul.navigation {
 
 /* second section */
 h2.scnd-section-text {
-    font-size: 3.5vw;
-    line-height: 3.8vw;
+    font-size: 6vw;
     letter-spacing: -0.04em;
     text-transform: lowercase;
 }
@@ -49,11 +54,14 @@ h2.scnd-section-text {
     background-repeat: no-repeat;
     background-size: 90% auto;
 }
+.third-section h3 {
+    font-size:3vw;
+}
 .third-section.padding {
-    padding: 5.5vw 10vw;
+    padding: 6vw 10vw;
 }
 .third-section p {
-    width:85%;
+    width:96%;
     font-size: 18px;
     line-height: 26px;
 }
@@ -61,10 +69,10 @@ h2.scnd-section-text {
 /* fourth-section */
 
 .fourth-section {
-    height: 100vh;
+    background-color: #101010;
 }
 .fourth-section h2 {
-    font-size: 3.5vw;
+    font-size: 6vw;
 }
 .fourth-bg-text h2 {
     font-weight: bold;
@@ -80,7 +88,7 @@ h2.scnd-section-text {
   height: 100vh;
   width: 100vw;
   left:0;
-  top:0;
+  top:42px;
   background-color:#000;
   color:#fff; 
   
@@ -120,7 +128,7 @@ h2.scnd-section-text {
     left:80vw; 
 }
 .frame1-text-padd {
-  padding: 10rem !important;
+  padding: 6rem !important;
 }
 .frame2-text-padd {
     padding: 4rem 8rem !important;
@@ -128,7 +136,9 @@ h2.scnd-section-text {
 .w-lg-75 {
     width: 75%;
 }
-
+.w-lg-60 {
+    width: 60%;
+}
 /* sixth section*/
 
 .sixth-section {
@@ -141,7 +151,7 @@ h2.scnd-section-text {
 /* footer */
 h1.footer-xxl {
     font-weight: bold;
-    font-size: 29vw;
+    font-size: 24vw;
     line-height: 33vw;
     letter-spacing: -0.04em;
 }
@@ -287,7 +297,11 @@ hr.bt-grey {
 .fourth-section-legal h2 {
     font-size: 3vw;
 }
-
+@media (max-width:1600px) {
+    body {
+        font-size: 1.125rem;
+    }
+}
 @media only screen and (max-width: 992px) {
     .s2c1 {
         width:100vw;
@@ -295,6 +309,10 @@ hr.bt-grey {
       .w-lg-75 {
         width: 98%;
     }
+    .w-lg-60 {
+        width: unset;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -315,7 +333,7 @@ hr.bt-grey {
       }
       
       .frame1-text-padd, .frame2-text-padd {
-        padding: 8rem 3rem 0rem 3rem !important;
+        padding: 4rem 2rem 1rem !important;
     }
     .pt-sm-5 {
         padding-top: 1.5rem;

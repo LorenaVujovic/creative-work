@@ -31,7 +31,7 @@
                 data-top-center="opacity[swing]:0">
                 Your agency for
             </h2>
-            <h2 class="scnd-section-text white font-weight-bold"
+            <h2 class="scnd-section-text white font-weight-bold text-center"
                 data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
                 data-center="opacity[swing]:1; transform:translateY(0px)"
                 data-top-center="opacity[swing]:0;">
@@ -76,8 +76,8 @@
                 </div>
             </div>
              <div class="col-12 col-md-6">
-                <h3 class="py-4 d-none d-md-inline">&nbsp;<br>&nbsp; </h3>
-                <p
+                <h3 class="py-4 d-none d-md-inline"> &nbsp; </h3>
+                <p  style="padding-top: calc(6vw + 1.2rem);"
                     data-bottom="opacity:0;"
                     data--20p-bottom="opacity:0; transform: translate3d(10px, 10px, 0);" 
                     data--25p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);"  
@@ -91,7 +91,10 @@
                     data--25p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                 >
                     The branding and web design agency that lets your business look great. Based in 
-                    <span>Munich, Cologne, Belgrade and Dubai.</span>
+                    <span
+                    data--25p-bottom="color: rgb(126, 126, 126);" 
+                    data--60p-bottom="color: rgb(218, 98, 138)"  
+                        >Munich, Cologne, Belgrade and Dubai.</span>
                 </p>
             </div>       
         </div>
@@ -100,16 +103,18 @@
 <!-- end third section -->
 
 <!-- fourtyh section -->
-    <div class="container-fluid fourth-section"  style="scroll-behavior:smooth" id="projects">
-        <div class="row white flex-column align-items-center justify-content-center " style="height:100%;">
-            <h2
+    <div class="container-fluid fourth-section"  style="" id="projects">
+        <div class="row white flex-column align-items-center justify-content-center" style="padding-top:40vh;">
+            <div class="text-center">
+            <h2  class="font-weight-bold"
                 data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
                 data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                 >our</h2>
-            <h2 class="text-transform-uppercase"
+            <h2 class="font-weight-bold text-transform-uppercase"
                 data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
                 data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
-                >projects</h2>
+                >PROJECTS</h2>
+                </div>
         </div>
     </div>   
 <!-- end fourth section -->
@@ -156,7 +161,7 @@
         <div class="section-portfolio"
             data-0="opacity: 0; display:!none "
             data-0-top="opacity: 0; display:!block "
-            data--200p-top="opacity: 1; display:!block" 
+            data--100p-top="opacity: 1; display:!block" 
             {# izlaz #}
             data--{{150 + Projects|length * 150 }}p-top="opacity: 1; display:!block; top:0vh" 
             data--{{250 + Projects|length * 150 }}p-top="opacity: 0; display:!none; top:-100vh" 
@@ -183,11 +188,11 @@
             
                 <div class="s2c1 d-none d-lg-block">
                     <img src="img/{{item.LargeImage}}" 
-                        style="width:100%;"/>
+                        style="width:100%; height:100%; object-fit: cover;"/>
                     {% if loop.first %}
                         <div class="curtain"
                             data-0-top ="height: 100vh;"
-                            data--200p-top="height: 0vh;"
+                            data--100p-top="height: 0vh;"
                             data-anchor-target = "#anchor">
                         </div>  
                     {% endif %} 
@@ -198,7 +203,7 @@
                         <h1>{{item.Title}}</h1>
                         <p style="white-space:pre-wrap">{{item.Text}}</p>
                     </div>
-                    <img src="img/{{item.SmallImage}}" style="width:100%;" />
+                    <img src="img/{{item.SmallImage}}" style="width:100%; object-fit: cover;" />
 
                     {% if loop.first %}
                         <div class="curtain"       
@@ -233,7 +238,7 @@
                 </div>
 
                 <div  class="s2c1 d-none d-lg-block">
-                    <img src="img/{{item.LargeImage}}" style="width:100%;"/>               
+                    <img src="img/{{item.LargeImage}}" style="width:100%; height:100%; object-fit: cover;"/>               
                 </div>
             </div>
     {% endif %}   
