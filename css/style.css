@@ -10,7 +10,7 @@ body {
 
 body {
   margin:0;
-  background-color:#000;
+  background-color: #101010 ;
   font-family: 'Montserrat';
   color: #7E7E7E;
 }
@@ -23,7 +23,7 @@ nav {
 }
 ul.navigation {
     padding-inline-start: 0px; 
-    justify-content: space-around;"
+    justify-content: space-around;
 }
 .spacer {
   height: 100vh;
@@ -65,6 +65,9 @@ h2.scnd-section-text {
     font-size: 18px;
     line-height: 26px;
 }
+.third-text {
+    padding-top: calc(6vw + 1.2rem);
+}
 
 /* fourth-section */
 
@@ -81,6 +84,76 @@ h2.scnd-section-text {
     top: 48%;
     color: #555454;
 }
+
+#arrow-wrapper {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .arrow-border {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 24px;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    right: 19px;
+  }
+  
+  .down {
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }  
+    
+  .pulse {
+      border-radius: 50%;
+      height: 57px;
+      width: 57px;
+      position: absolute;
+      margin: 0;
+      animation: pulsate 2s ease-out;
+      animation-iteration-count: infinite;
+      opacity: 0.0;
+      box-shadow: inset 0 0 8px 0px #fff;
+      animation-delay: 2s;
+  }
+
+  .pulse::before, .pulse::after,
+  .down::before, .down::after,
+  .arrow::before, .arrow::after,
+  .pularrow-borderse::before, .arrow-border::after,
+  #arrow-wrapper::before, #arrow-wrapper::after
+  {
+        box-sizing: unset !important; 
+    }
+  
+  @keyframes pulsate {
+    0% {
+      transform: scale(0.9, 0.9);
+      opacity: 0.0;
+    }
+    50% {
+      opacity: 1.0;
+    }
+    100% {
+      transform: scale(1.3, 1.3);
+      opacity: 0;
+    }
+  }
+
 /* fifth section portfolio*/
 
 .section-portfolio{
@@ -122,6 +195,15 @@ h2.scnd-section-text {
   display: flex;
   left:80vw; 
 }
+#frejm2 > div.s2c1.bg-white.text-dark > img {
+    height: 60vh;
+    object-fit: cover;
+}
+#frejm2 > div.s2c1.bg-white.text-dark > div {
+    background-image: url(../images/banner-transparent.png);
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
 #frejm3{
     position:absolute;
     display: flex;
@@ -145,7 +227,7 @@ h2.scnd-section-text {
     min-height: 100vh;
 }
 .sixth-section h2 {
-    font-size: 3.5vw;
+    font-size: 6vw;
 }
 
 /* footer */
@@ -182,8 +264,8 @@ a.footer-link:hover {
 /* second-section-services */
 
 .second-section-services {
-    min-height: 50vh;
-    padding: 5.5vw 10vw;
+    min-height: 65vh;
+    padding: 5.5vw 6vw;
 }
 .second-section-services h2 {
     font-size: 2.8vw;
@@ -242,7 +324,7 @@ hr.bt-grey {
 
 .first-section-legal {
     min-height: 100vh;
-    margin-top: 80px;
+    padding-top: 80px;
 }
 .first-section-legal h1  {
     font-size: 7.8vw;
@@ -300,6 +382,7 @@ hr.bt-grey {
 @media (max-width:1600px) {
     body {
         font-size: 1.125rem;
+        line-height: 1.5rem;
     }
 }
 @media only screen and (max-width: 992px) {
@@ -338,6 +421,84 @@ hr.bt-grey {
     .pt-sm-5 {
         padding-top: 1.5rem;
     }   
+    nav {
+        padding-left: unset;
+        padding-right: unset;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .nav-link {
+        padding: 0.5rem;
+    }
+
+    #arrow-wrapper {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      .arrow-border {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 50%;
+      }
+    
+      .arrow {
+        position: absolute;
+        bottom: 15px;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid white;
+        border-right: 2px solid white;
+        right: 13px;
+      }
+      
+      .down {
+        -moz-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }  
+        
+      .pulse {
+          border-radius: 50%;
+          height: 38px;
+          width: 38px;
+          position: absolute;
+          margin: 0;
+          animation: pulsate 2s ease-out;
+          animation-iteration-count: infinite;
+          opacity: 0.0;
+          box-shadow: inset 0 0 8px 0px #fff;
+          animation-delay: 2s;
+      }
+    
+      .pulse::before, .pulse::after,
+      .down::before, .down::after,
+      .arrow::before, .arrow::after,
+      .pularrow-borderse::before, .arrow-border::after,
+      #arrow-wrapper::before, #arrow-wrapper::after
+      {
+            box-sizing: unset !important; 
+        }
+      
+      @keyframes pulsate {
+        0% {
+          transform: scale(0.9, 0.9);
+          opacity: 0.0;
+        }
+        50% {
+          opacity: 1.0;
+        }
+        100% {
+          transform: scale(1.3, 1.3);
+          opacity: 0;
+        }
+      }
 }
 
 @media only screen and (max-width: 567px) {
@@ -348,4 +509,37 @@ hr.bt-grey {
         padding-left:0;
         padding-right:0.2rem;
     }
+    body {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .third-section h3 {
+        font-size: 1.5rem;
+    }
+    .third-section p {
+        width: unset;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .third-text {
+        padding-top: unset;
+    }
+    .frame1-text-padd, .frame2-text-padd {
+        padding: 3rem 2rem 1rem !important;
+    }
 } 
+
+
+/* nav color change */
+.lite{
+    background-color: transparent;
+    color: white;
+}
+.dark{
+    background-color: transparent;
+    color: black;
+}
+#menu a { 
+    color: inherit;
+    transition: color 0.3s;
+}

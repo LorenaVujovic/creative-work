@@ -16,41 +16,41 @@
 
     </head>
 
-    <body>
+    <body style="scroll-behavior: smooth;">
 
-        <nav class="fixed-top" style="background-color: #fff; ">
+        <nav class="fixed-top" >
 
            <!-- <a class="" href="#">Animacija</a> -->
- 
-            <ul class="navigation d-flex mb-0 font-weight-bold" style=" color: #000;">
+            {% set c = (_GET[0] in ['','index']) ?'255':'0' %}
+            <ul class="navigation d-flex mb-0 font-weight-bold" id="menu">
                 <li class="d-inline " style="flex:1">
-                    <a href="index" style="display:inline-block; position:relative" class="nav-link font-weight-bold"  style="color: #000;">
+                    <a href="index" style="display:inline-block; position:relative" class="nav-link font-weight-bold" >
                     <span
                         data-0="display:!inline;"
                         data-190="display:!none;"                    
-                    >THE CREATIVEWORK</span>
+                    >the creativework</span>
                     <span
                         data-0="display:!none;"
                         data-190="display:!inline;"                       
                     >tc.</span>
                         <div style="position:absolute; left:0; top:0; right:0; bottom:0; 
-                        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);"
-                        data-0="background: linear-gradient(0deg, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);"
-                        data-190="background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%);"
-                        data-500="background: linear-gradient(0deg, rgba(255,255,255,0) 100%, rgba(255,255,255,1) 100%);"
+                        background: linear-gradient(90deg, rgba({{c}},{{c}},{{c}},0) 0%, rgba({{c}},{{c}},{{c}},1) 100%);"
+                        data-0="background: linear-gradient(0deg, rgba({{c}},{{c}},{{c}},0) 90%, rgba({{c}},{{c}},{{c}},1) 100%);"
+                        data-190="background: linear-gradient(0deg, rgba({{c}},{{c}},{{c}},0) 0%, rgba({{c}},{{c}},{{c}},1) 10%);"
+                        data-500="background: linear-gradient(0deg, rgba({{c}},{{c}},{{c}},0) 100%, rgba({{c}},{{c}},{{c}},1) 100%);"
                         > 
                         </div>
                     </a>
 
                 </li>
                 <li class="d-inline ">
-                    <a class="nav-link" href="index/#projects"  style="color: #000;">Projects</a>
+                    <a class="nav-link" href="index/#projects">Projects</a>
                 </li>
                 <li class="d-inline">
                     <a class="nav-link" href="services">Services</a>
                 </li>
                 <li class="d-inline">
-                    <a class="nav-link" href="">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
 
             </ul>
@@ -60,9 +60,5 @@
     {% block content %}{% endblock %}
 
     </body>
-    <style>
-    .navigation a {
-        color:black;
-    }
-    </style>
+
 </html>
