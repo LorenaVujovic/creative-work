@@ -110,7 +110,7 @@
 
 <!-- end third section -->
 
-<!-- fourtyh section -->
+<!-- fourtyh section
     <div class="container-fluid fourth-section" style="" id="projects"
         data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
         <div class="row white flex-column align-items-center justify-content-center" style="padding-top:40vh;">
@@ -139,14 +139,14 @@
                 </div>
         </div>
     </div>   
-<!-- end fourth section -->
+end fourth section -->
 
 
 
 <!-- fifth section -->
 {% set Projects = fetch("Projects") %}
 
-    <div id="anchor" style="height:{{250 + Projects|length * 150 }}vh;"
+    <div id="projects" style="height:{{250 + Projects|length * 150 }}vh;"
     data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
 
     </div>
@@ -185,34 +185,41 @@
 {# FIXED JE VAN SKROLLR BADIJA #}
 
         <div class="section-portfolio"
-            data-0="opacity: 0; display:!none "
-            data-0-top="opacity: 0; display:!block "
-            data--100p-top="opacity: 1; display:!block" 
-            {# izlaz #}
+            data-1-bottom-top="opacity: 0; display:!none "
+            data-bottom-top="opacity: 1; display:!block; top:100vh "
+            data-0-top="opacity: 1; display:!block; top:0vh "
+            data--10p-top="opacity: 1; display:!block" 
+
+{#}            data-0="opacity: 0; display:!none "
+            data-0-top="opacity: 1; display:!block "
+            data--10p-top="opacity: 1; display:!block" 
+#}            {# izlaz #}
             data--{{150 + Projects|length * 150 }}p-top="opacity: 1; display:!block; top:0vh" 
             data--{{250 + Projects|length * 150 }}p-top="opacity: 0; display:!none; top:-100vh" 
 
-            data-anchor-target = "#anchor">
-<!--
-                <div class="container-fluid fourth-section" style="position:absolute; left:0; top:0"
-                    data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
+            data-anchor-target = "#projects">
+
+                <div class="container-fluid fourth-section" style="position:absolute; left:0; top:0; z-index: 1; background-color: transparent;" >
                     <div class="row white flex-column align-items-center justify-content-center" style="padding-top:40vh;">
                         <div class="text-center">
                         <h2  class="font-weight-bold"
-                            data-bottom-top="opacity[swing]:0; transform:translateY(150px)"
-                            data-center="opacity[swing]:1; transform:translateY(0px)"
-                            data-top-center="opacity[swing]:0"
+                            data--50p-top="opacity[swing]:0; transform:translateY(-150px)"
+                            data-50p-top="opacity[swing]:1; transform:translateY(0px)"
+                            data-100p-top="opacity[swing]:0"
+                            data-anchor-target = "#projects"
                             >our</h2>
                         <h2 class="font-weight-bold text-transform-uppercase"
-                            data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
-                            data-center="opacity[swing]:1; transform:translateY(0px)"
-                            data-top-center="opacity[swing]:0;"
+                            data--50p-top="opacity[swing]:0; transform:translateY(-200px)"
+                            data-10p-top="opacity[swing]:1; transform:translateY(0px)"
+                            data-100p-top="opacity[swing]:0;" 
+                            data-anchor-target = "#projects"
                             >PROJECTS</h2>
 
                                 <div id="arrow-wrapper"
-                                    data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
-                                    data-center="opacity[swing]:1; transform:translateY(0px)"
-                                    data-top-center="opacity[swing]:0;"
+                                    data--50p-top="opacity[swing]:0; transform:translateY(-200px)"
+                                    data-10p-top="opacity[swing]:1; transform:translateY(0px)"
+                                    data-100p-top="opacity[swing]:0;"
+                                    data-anchor-target = "#projects"
                                 >
                                     <div class="arrow-border">
                                         <div class="arrow down"></div>
@@ -222,7 +229,7 @@
                             </div>
                     </div>
                 </div>           
--->
+
 {% for item in Projects %}     
     {% if (loop.index0 is even) %}
 
@@ -237,7 +244,7 @@
                     data--{{430 + loop.index0*150}}p-top="left:-100vw;"
                 {% endif %}                   
 
-                data-anchor-target = "#anchor"
+                data-anchor-target = "#projects"
                 >
             
                 <div class="s2c1 d-none d-lg-block">
@@ -247,7 +254,7 @@
                         <div class="curtain"
                             data-0-top ="height: 100vh;"
                             data--100p-top="height: 0vh;"
-                            data-anchor-target = "#anchor">
+                            data-anchor-target = "#projects">
                         </div>  
                     {% endif %} 
                 </div>
@@ -263,7 +270,7 @@
                         <div class="curtain"       
                             data--100p-top ="height: 100vh;"
                             data--300p-top="height: 0vh;"
-                            data-anchor-target = "#anchor">
+                            data-anchor-target = "#projects">
                         </div>  
                     {% endif %} 
                 </div>
@@ -280,7 +287,7 @@
                     data--{{305 + loop.index0*150}}p-top="left: 0vw;"
                     data--{{430 + loop.index0*150}}p-top="left:-100vw;"
                 {% endif %}                   
-                data-anchor-target = "#anchor"
+                data-anchor-target = "#projects"
                 >
             
                 <div class="s2c1 bg-white d-flex flex-column justify-content-between flex-1" style="color: #7e7e7e;">
@@ -322,7 +329,7 @@
             menu.classList.remove('dark');
             menu.classList.add(clas);
         }
-        //, skrollrBody:'anchor'
+       // , skrollrBody:'projects'
     });
     skrollr.menu.init(s, {
         //skrollr will smoothly animate to the new position using `animateTo`.
