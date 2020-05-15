@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" style="height: 100%">
     <head>
-    <base href="{{_BASE}}">
-    <title>Creative work</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{% block description %}{% endblock %}"/>
-    <meta property="og:image" content="">
-    <link rel="stylesheet" type="text/css" media="screen" href="fonts/font.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?refresh=4">  
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-
+        <base href="{{_BASE}}">
+        <title>Creative work</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% block description %}{% endblock %}"/>
+        <meta property="og:image" content="">
+        <link rel="stylesheet" type="text/css" media="screen" href="fonts/font.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css?refresh=4">  
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/skrollr.min.js"></script>
+        <script src="js/skrollr.menu.min.js"></script>
     </head>
 
     <body style="scroll-behavior: smooth;">
@@ -44,13 +44,13 @@
 
                 </li>
                 <li class="d-inline ">
-                    <a class="nav-link" href="index/#projects">Projects</a>
+                    <a class="nav-link" href="{{_GET[0] in ['','index']? '#projects': 'index#projects'}}">Projects</a>
                 </li>
                 <li class="d-inline">
                     <a class="nav-link" href="services">Services</a>
                 </li>
                 <li class="d-inline">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="{{_GET[0] in ['','index']? '#contact': 'index#contact'}}">Contact</a>
                 </li>
 
             </ul>

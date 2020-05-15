@@ -49,21 +49,23 @@ h2.scnd-section-text {
 /* third section */
 .third-section {
     min-height: 40vw; 
-    background-image: url(../images/beige-banner.png);
+    background-image: url(../images/thecreativeworkco.svg);
     background-position: calc(100% - 0px) calc(100% - 0px);
     background-repeat: no-repeat;
     background-size: 90% auto;
 }
 .third-section h3 {
     font-size:3vw;
+    color: #555454;
 }
 .third-section.padding {
-    padding: 6vw 10vw;
+    padding: 6vw 10vw 9vw;
 }
 .third-section p {
     width:96%;
     font-size: 18px;
     line-height: 26px;
+    color: #555454;
 }
 .third-text {
     padding-top: calc(6vw + 1.2rem);
@@ -195,11 +197,11 @@ h2.scnd-section-text {
   display: flex;
   left:80vw; 
 }
-#frejm2 > div.s2c1.bg-white.text-dark > img {
+#frejm2 > div.s2c1.bg-white > img {
     height: 60vh;
     object-fit: cover;
 }
-#frejm2 > div.s2c1.bg-white.text-dark > div {
+#frejm2 > div.s2c1.bg-white > div {
     background-image: url(../images/banner-transparent.png);
     background-position-y: bottom;
     background-repeat: no-repeat;
@@ -224,7 +226,7 @@ h2.scnd-section-text {
 /* sixth section*/
 
 .sixth-section {
-    min-height: 100vh;
+    min-height: 70vh;
 }
 .sixth-section h2 {
     font-size: 6vw;
@@ -258,7 +260,9 @@ a.footer-link {
 a.footer-link:hover {
     text-decoration: none;
 }
-
+.footer-emails a {
+    font-size: max(0.8em, 0.93vw);
+}
 /* SERVICES */
 
 /* second-section-services */
@@ -385,6 +389,7 @@ hr.bt-grey {
         line-height: 1.5rem;
     }
 }
+
 @media only screen and (max-width: 992px) {
     .s2c1 {
         width:100vw;
