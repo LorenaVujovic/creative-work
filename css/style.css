@@ -13,6 +13,7 @@ body {
   background-color: #101010 ;
   font-family: 'Montserrat';
   color: #7E7E7E;
+  overflow-x: hidden;
 }
 nav {
     padding-left: 1.5rem;
@@ -64,7 +65,7 @@ h2.scnd-section-text {
 .third-section p {
     width:96%;
     font-size: 18px;
-    line-height: 26px;
+    line-height: 28px;
     color: #555454;
 }
 .third-text {
