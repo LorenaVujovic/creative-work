@@ -23,32 +23,54 @@
 {% include 'intro.twig' %}
 
 <!-- second section -->
-    <div class="container-fluid" style="height: 100vh;" id="agency"
+    <div class="container-fluid d-md-flex flex-column" style="height: 100vh;" id="agency"
             data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
-        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-            <h2 class="scnd-section-text white" 
+        <div class="your-agency mx-auto" style="height: 100%;">
+            <h2 class="scnd-section-text weight-ch white" 
                 data-bottom-top="opacity[swing]:0; transform:translateY(150px)"
                 data-center="opacity[swing]:1; transform:translateY(0px)"
                 data-top-center="opacity[swing]:0">
                 Your agency for
             </h2>
-            <h2 class="scnd-section-text white font-weight-bold text-center"
+            <h2 class="scnd-section-text white font-weight-bold"
                 data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
                 data-center="opacity[swing]:1; transform:translateY(0px)"
                 data-top-center="opacity[swing]:0;">
-                branding and web design
+                branding <br class="d-md-none">
+                and <br class="d-md-none">
+                web design
             </h2>
         </div>
     </div>
-<!-- end second section -->
+<!--
+    <div class="container-fluid d-flex flex-column d-md-none" style="height: 100vh;" id="agency"
+            data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
+        <div class="d-flex flex-column justify-content-center align-items-start px-4" style="height: 100%;">
+            <h2 class="scnd-section-text white font-weight-normal" 
+                data-bottom-top="opacity[swing]:0; transform:translateY(150px)"
+                data-center="opacity[swing]:1; transform:translateY(0px)"
+                data-top-center="opacity[swing]:0">
+                Your agency for
+            </h2>
+            <h2 class="scnd-section-text white font-weight-bold"
+                data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
+                data-center="opacity[swing]:1; transform:translateY(0px)"
+                data-top-center="opacity[swing]:0;">
+                branding <br>
+                and <br>
+                web design
+            </h2>
+        </div>
+    </div>
+end second section -->
 
 <!-- third section -->
     <div class="third-section padding container-fluid bg-white d-flex flex-column justify-content-center"  style="color: #555454;"
         data-top="" data-top-bottom="" data-emit-events data-menu="dark">
         <div class="row align-items-top" style="">
             <div class="col-12 col-md-6">
-                <div class="my-auto">
-                    <h3 class="py-4"
+                <div class="my-auto wo">
+                    <h3 class="positioning-sm py-md-4 pt-sm-5"
                         data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
                         data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                     
@@ -110,64 +132,98 @@
 
 <!-- end third section -->
 
-<!-- fourtyh section
-    <div class="container-fluid fourth-section" style="" id="projects"
+<!-- fourth section -->
+    <div class="container-fluid fourth-section d-none d-md-block" 
         data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
-        <div class="row white flex-column align-items-center justify-content-center" style="padding-top:40vh;">
+        <div class="row white flex-column align-items-center justify-content-center neg-space-handler" style="">
             <div class="text-center">
-            <h2  class="font-weight-bold"
-                data-bottom-top="opacity[swing]:0; transform:translateY(150px)"
-                data-center="opacity[swing]:1; transform:translateY(0px)"
-                data-top-center="opacity[swing]:0"
-                >our</h2>
-            <h2 class="font-weight-bold text-transform-uppercase"
-                data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
-                data-center="opacity[swing]:1; transform:translateY(0px)"
-                data-top-center="opacity[swing]:0;"
-                >PROJECTS</h2>
-
-                    <div id="arrow-wrapper"
-                        data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
-                        data-center="opacity[swing]:1; transform:translateY(0px)"
-                        data-top-center="opacity[swing]:0;"
-                    >
-                        <div class="arrow-border">
-                            <div class="arrow down"></div>
-                            <div class='pulse'></div>
-                        </div>
-                    </div>
-                </div>
+                <h2  class="font-weight-bold"
+                    data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
+                    data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                    >our</h2>
+                <h2 class="font-weight-bold text-transform-uppercase"
+                    data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
+                    data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
+                    >PROJECTS</h2>
+            </div>
         </div>
     </div>   
-end fourth section -->
 
 
+<div class="owl-carousel owl-theme" id="projects" style="height:100vh;">
 
-<!-- fifth section -->
-{% set Projects = fetch("Projects") %}
-
-    <div id="projects" style="height:{{250 + Projects|length * 150 }}vh;"
-    data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
-
+    <div class="container-fluid m-0 p-0 item" style="height:100vh;">
+        <div class="row no-gutters" style="height: 100%;">
+            <div class="col-12 col-md-6 order-2 order-md-1 d-none d-md-block">
+                <img src="images/portfolio-1.png" class="w-100" style="object-fit: cover; height:100%;"/>
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start white order-1 order-md-2">                
+                <div class="w-lg-50 frame1-text-padd">
+                    <h1>JOEFALK /  <br class="d-md-none">1850.</h1>
+                    <p class="pt-sm-6">
+                        A garment brand for products made in Germany. We developed the branding strategy, did the web design, 
+                        created the online shop, managed photo- and video-shoots, created product brochures for the international market and wrote several texts.
+                    </p>
+                </div>
+                <img src="images/portfolio-2.png" style="width:100%;" class="p-0" />             
+            </div>
+        </div>
     </div>
-<!-- end fifth section -->
+
+    <div class="container-fluid m-0 p-0 item" style="height:100vh;">
+        <div class="row no-gutters" style="min-width: 100vw; height: 100%;">
+            <div class="col-12 col-md-6">
+                <img src="images/portfolio-3.jpg" class="w-100 d-none d-md-block" style=""/>
+                <div class="w-lg-50 frame1-text-padd bg-white">
+                    <h1>the GERMAN <br class="d-md-none">BAKERS</h1>
+                    <p class="pt-sm-5 pb-sm-5">
+                        A catering concept for the airline industry. 
+                        We developed the whole branding, the design for the product catalogue, stationary and developed a sales & marketing strategy.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start white">                
+                <img src="images/portfolio-4.jpg" style="width:100%;" class="p-0" />             
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid m-0 p-0 item" style="height:100vh;">
+        <div class="row no-gutters" style="height: 100%;">
+            <div class="col-12 col-md-6 d-none d-md-block">
+                <img src="images/portfolio-5.png" class="w-100" style="object-fit: cover; height:100%;"/>
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start white">                
+                <div class="w-lg-50 frame1-text-padd">
+                    <h1>LA JOIE</h1>
+                    <p>
+                        A French bistro concept for the German market. 
+                        We supported this new concept with POS and packaging design as well as with the creation of a pitch deck and start up advisory.                    
+                    </p>
+                </div>
+                <img src="images/portfolio-6.png" style="width:100%;" class="p-0" />             
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- end fourth section -->
 
 
 <!-- sixth section -->
-    <div class="container-fluid sixth-section white d-flex flex-column  align-items-center justify-content-center"
-    data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
+    <div class="container-fluid sixth-section white">
         <div class="row">
-            <div class="col text-center">
+            <div class="col text-center"
+                data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
                 <h2
-                    data-bottom-top="opacity[swing]:0; transform:translateY(150px)"
-                    data-center="opacity[swing]:1; transform:translateY(0px)"
-                    data-top-center="opacity[swing]:0"
+                    data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
+                    data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                     >service
                 </h2>
                 <h2 class="font-weight-bold"
-                    data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
-                    data-center="opacity[swing]:1; transform:translateY(0px)"
-                    data-top-center="opacity[swing]:0;"                
+                    data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
+                    data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);"             
                     >MADE IN GERMANY
                 </h2>
             </div>
@@ -175,134 +231,49 @@ end fourth section -->
     </div>
 <!-- end sixth section -->
 <!-- footer -->
-    {% include 'footer.twig' with {'boja' : '#DA628A'} %}
+    {% include 'footer.twig' with {'boja' : '#79B2C6'}  %}
 <!-- end footer -->
 </div>
 
-
-
-
-{# FIXED JE VAN SKROLLR BADIJA #}
-
-        <div class="section-portfolio"
-            data-1-bottom-top="opacity: 0; display:!none "
-            data-bottom-top="opacity: 1; display:!block; top:100vh "
-            data-0-top="opacity: 1; display:!block; top:0vh "
-            data--10p-top="opacity: 1; display:!block" 
-
-{#}            data-0="opacity: 0; display:!none "
-            data-0-top="opacity: 1; display:!block "
-            data--10p-top="opacity: 1; display:!block" 
-#}            {# izlaz #}
-            data--{{150 + Projects|length * 150 }}p-top="opacity: 1; display:!block; top:0vh" 
-            data--{{250 + Projects|length * 150 }}p-top="opacity: 0; display:!none; top:-100vh" 
-
-            data-anchor-target = "#projects">
-
-                <div class="container-fluid fourth-section" style="position:absolute; left:0; top:0; z-index: 1; background-color: transparent;" >
-                    <div class="row white flex-column align-items-center justify-content-center" style="padding-top:40vh;">
-                        <div class="text-center">
-                        <h2  class="font-weight-bold"
-                            data--50p-top="opacity[swing]:0; transform:translateY(-150px)"
-                            data-50p-top="opacity[swing]:1; transform:translateY(0px)"
-                            data-100p-top="opacity[swing]:0"
-                            data-anchor-target = "#projects"
-                            >our</h2>
-                        <h2 class="font-weight-bold text-transform-uppercase"
-                            data--50p-top="opacity[swing]:0; transform:translateY(-200px)"
-                            data-10p-top="opacity[swing]:1; transform:translateY(0px)"
-                            data-100p-top="opacity[swing]:0;" 
-                            data-anchor-target = "#projects"
-                            >PROJECTS</h2>
-                        </div>
-                    </div>
-                </div>           
-
-{% for item in Projects %}     
-    {% if (loop.index0 is even) %}
-
-            <div id="frejm{{loop.index}}" class="frejm" 
-                {% if not loop.first %} {# samo prvi frejm ne ulazi s desna #}
-                    data--{{150 + loop.index0*150}}p-top="left[outCubic]: 100vw;"
-                    data--{{300 + loop.index0*150}}p-top="left[outCubic]: 00vw;" 
-                {% endif %} 
-
-                {% if not loop.last %} {# samo zadnji frejm ne izlazi ulijevo #}
-                    data--{{305 + loop.index0*150}}p-top="left: 0vw;"
-                    data--{{430 + loop.index0*150}}p-top="left:-100vw;"
-                {% endif %}                   
-
-                data-anchor-target = "#projects"
-                >
-            
-                <div class="s2c1 d-none d-lg-block">
-                    <img src="img/{{item.LargeImage}}" 
-                        style="width:100%; height:100%; object-fit: cover;"/>
-                    {% if loop.first %}
-                        <div class="curtain"
-                            data-0-top ="height: 100vh;"
-                            data--100p-top="height: 0vh;"
-                            data-anchor-target = "#projects">
-                        </div>  
-                    {% endif %} 
-                </div>
-
-                <div  class="s2c1 d-flex flex-column justify-content-between align-items-start">
-                    <div class="w-lg-50 frame1-text-padd">
-                        <h1>{{item.Title}}</h1>
-                        <p style="white-space:pre-wrap">{{item.Text}}</p>
-                    </div>
-                    <img src="img/{{item.SmallImage}}" style="width:100%; object-fit: cover;" />
-
-                    {% if loop.first %}
-                        <div class="curtain"       
-                            data--100p-top ="height: 100vh;"
-                            data--300p-top="height: 0vh;"
-                            data-anchor-target = "#projects">
-                        </div>  
-                    {% endif %} 
-                </div>
-            </div>
-    {% else %}   
-
-            <div id="frejm{{loop.index}}" class="frejm" style=""
-                {% if not loop.first %} {# samo prvi frejm ne ulazi s desna #}
-                    data--{{150 + loop.index0*150}}p-top="left[outCubic]: 100vw;"
-                    data--{{300 + loop.index0*150}}p-top="left[outCubic]: 00vw;" 
-                {% endif %}         
-
-                {% if not loop.last %} {# samo zadnji frejm ne izlazi ulijevo #}
-                    data--{{305 + loop.index0*150}}p-top="left: 0vw;"
-                    data--{{430 + loop.index0*150}}p-top="left:-100vw;"
-                {% endif %}                   
-                data-anchor-target = "#projects"
-                >
-            
-                <div class="s2c1 bg-white d-flex flex-column justify-content-between flex-1" style="color: #7e7e7e;">
-                    <img src="img/{{item.SmallImage}}" style="width:100%;"/>                   
-                    <div class="w-lg-50 frame2-text-padd">
-                        <h1>{{item.Title}}</h1>
-                        <p>{{item.Text}}</p>
-                    </div>
-                </div>
-
-                <div  class="s2c1 d-none d-lg-block">
-                    <img src="img/{{item.LargeImage}}" style="width:100%; height:100%; object-fit: cover;"/>               
-                </div>
-            </div>
-    {% endif %}   
-{% endfor %}
-
-
-
-        
-        </div>    
-{# END FIXED JE VAN SKROLLR BADIJA #}
-
-
-
-
+<style>
+.owl-nav{
+    position:absolute;
+    bottom:10vh;
+    right:4rem;
+}
+.owl-dots{
+    position:absolute;
+    bottom:10vh;
+    left:3rem;
+}
+@media only screen and (max-width: 768px) {
+.owl-nav{
+    position:absolute;
+    bottom:2vh !important;
+    right:2rem;
+}
+.owl-dots{
+    position:absolute;
+    bottom:2vh !important;
+    left: 0rem;  
+}
+}
+</style>
 <script>
+window.addEventListener('load', function() {
+    console.log('All assets are loaded')
+    console.log('doc on load')
+    var owl = $('.owl-carousel');
+    
+    owl.owlCarousel({
+        loop:false,
+        margin:0,
+        nav:true,
+        items:1,
+        smartSpeed:450
+    })
+    ;
+
     var menu = document.getElementById("menu")
     var s = skrollr.init({
         forceHeight:false
@@ -311,7 +282,7 @@ end fourth section -->
             if( name=='data20Top' && direction=='up') return 
             if( name=='dataTop' && direction=='up') return 
             var clas = (element && element.dataset)?element.dataset.menu:null;
-            console.log('menu class:', clas, element.id, name, direction )
+            console.log('menu class:', clas, element.id, name, direction, element )
             if (!clas) return
             menu.classList.remove('lite'); 
             menu.classList.remove('dark');
@@ -331,6 +302,14 @@ end fourth section -->
         //Add hash link (e.g. `#foo`) to URL or not.
       //  updateUrl: false //defaults to `true`.
     });    
+
+})
+
+</script>
+
+
+
+<script>
 /*
     var hash = document.location.hash
     if (hash) {
@@ -340,5 +319,7 @@ end fourth section -->
         console.log('scrolled to ', hash, link)
     }
     */
+    
 </script>
+
 {% endblock %}
