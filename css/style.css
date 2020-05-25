@@ -7,11 +7,7 @@ body {
     -webkit-overflow-scrolling:touch;
 }
 */
-html, body {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-}
+
 body {
   margin:0;
   background-color: #101010 ;
@@ -429,6 +425,11 @@ hr.bt-grey {
 }
 
 @media only screen and (max-width: 768px) {
+    html, body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+    }
     .fourth-section {
         height: 0;
         overflow: hidden;
