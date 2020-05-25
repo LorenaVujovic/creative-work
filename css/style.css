@@ -429,6 +429,11 @@ hr.bt-grey {
 }
 
 @media only screen and (max-width: 768px) {
+    .fourth-section {
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
     ul.navigation {
         padding-inline-start: 0px; 
         justify-content: unset;

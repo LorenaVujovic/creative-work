@@ -133,7 +133,7 @@ end second section -->
 <!-- end third section -->
 
 <!-- fourth section -->
-    <div class="container-fluid fourth-section d-none d-md-block" 
+    <div class="container-fluid fourth-section d-md-block" 
         data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
         <div class="row white flex-column align-items-center justify-content-center neg-space-handler" style="">
             <div class="text-center">
@@ -150,7 +150,8 @@ end second section -->
     </div>   
 
 
-<div class="owl-carousel owl-theme" id="projects" style="height:100vh;">
+<div class="owl-carousel owl-theme" id="projects" style="height:100vh;"
+    data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
 
     <div class="container-fluid m-0 p-0 item" style="height:100vh;">
         <div class="row no-gutters" style="height: 100%;">
@@ -282,6 +283,7 @@ window.addEventListener('load', function() {
             if( name=='dataTopBottom' && direction=='down') return // ignorisemo bottom ako ide dolje
             if( name=='data20Top' && direction=='up') return 
             if( name=='dataTop' && direction=='up') return 
+            if (element.classList.contains('fourth-section') && (window.innerHeight<768) ) return
             var clas = (element && element.dataset)?element.dataset.menu:null;
             console.log('menu class:', clas, element.id, name, direction, element )
             if (!clas) return
