@@ -135,7 +135,11 @@ end second section -->
 <!-- fourth section -->
     <div class="container-fluid fourth-section d-md-block" 
         data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
-        <div class="row white flex-column align-items-center justify-content-center neg-space-handler" style="">
+        <div class="row white flex-column align-items-center justify-content-center neg-space-handler" 
+            style="background-image: url(images/banner_shadow_black.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size:contain;">
             <div class="text-center">
                 <h2  class="font-weight-bold"
                     data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
@@ -175,7 +179,7 @@ end second section -->
         <div class="row no-gutters" style="min-width: 100vw; height: 100%;">
             <div class="col-12 col-md-6">
                 <img src="images/portfolio-3.jpg" class="w-100 d-none d-md-block" style=""/>
-                <div class="w-lg-50 frame1-text-padd bg-white">
+                <div class="w-lg-50 frame1-text-padd-2 bg-white">
                     <h1>the GERMAN <br class="d-md-none">BAKERS</h1>
                     <p class="pt-sm-5 pb-sm-5">
                         A catering concept for the airline industry. 
@@ -239,13 +243,13 @@ end second section -->
 <style>
 .owl-nav{
     position:absolute;
-    bottom:10vh;
-    right:4rem;
+    bottom:5vh;
+    right:3rem;
 }
 .owl-dots{
     position:absolute;
-    bottom:10vh;
-    left:3rem;
+    bottom:5vh;
+    left:0;
 }
 @media only screen and (max-width: 768px) {
 .owl-nav{
@@ -272,9 +276,14 @@ window.addEventListener('load', function() {
         nav:true,
         items:1,
         smartSpeed:450,
-        touchDrag: false
+        touchDrag: false,
+         navText: ["<img src='images/purple_line.png'>",'<span id="navnumber">1</span>']
     })
     ;
+owl.on('changed.owl.carousel', function(event) {
+    console.log(event)
+    window.document.getElementById('navnumber').innerHTML = event.item.index+1
+})
 
     var menu = document.getElementById("menu")
     var s = skrollr.init({
@@ -313,6 +322,7 @@ window.addEventListener('load', function() {
 
 
 <script>
+
 /*
     var hash = document.location.hash
     if (hash) {
@@ -321,8 +331,7 @@ window.addEventListener('load', function() {
         skrollr.menu.click(link);    
         console.log('scrolled to ', hash, link)
     }
-    */
-    
+     */
 </script>
 
 {% endblock %}

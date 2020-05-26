@@ -15,6 +15,33 @@ body {
   color: #7E7E7E;
   overflow-x: hidden;
 }
+:focus {
+    outline: none;
+    outline-color: none;
+    outline-style: none;
+    outline-width: 0;
+}
+#projects > div.owl-dots > button > span {
+    background-image: url(../images/project-dots.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 8px;
+    width: 8px;
+    position: relative;
+    top: 0px;
+}
+#projects > div.owl-dots > button.owl-dot.active > span {
+    background-image: url(../images/dots-projects.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 21px;
+    width: 21px;
+    position: relative;
+    top: 6px;
+}
+
 nav {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -41,6 +68,9 @@ ul.navigation {
 }
 .neg-space-handler {
     height:100vh;
+}
+#navnumber {
+    color: #DA628A;
 }
 /* second section */
 h2.scnd-section-text {
@@ -82,7 +112,7 @@ h2.scnd-section-text {
 /* fourth-section */
 
 .fourth-section {
-    background-color: #101010;
+    background-color: #121212;
 }
 .fourth-section h2 {
     font-size: 6vw;
@@ -220,7 +250,20 @@ h2.scnd-section-text {
     left:80vw; 
 }
 .frame1-text-padd {
-  padding: 6rem !important;
+    padding: 6rem !important;
+    flex-grow: 1;
+    background-image: url(../images/banner-dark-short.png);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.frame1-text-padd-2 {
+    padding: 6rem !important;
+    flex-grow: 1;
+    background-image: url(../images/bg-baner-beige.png);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 .frame2-text-padd {
     padding: 4rem 8rem !important;
@@ -234,6 +277,10 @@ h2.scnd-section-text {
 /* sixth section*/
 
 .sixth-section {
+    background-image: url(../images/banner_shadow_black.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
     height: 60vh;
     display: flex; 
     flex-direction: column;
@@ -245,6 +292,9 @@ h2.scnd-section-text {
 }
 
 /* footer */
+.bg-custom-dark {
+    background-color: #0A0A0A;
+}
 h1.footer-xxl {
     font-weight: bold;
     font-size: 18vw;
@@ -440,6 +490,7 @@ hr.bt-grey {
         justify-content: unset;
     }
     .frame1-text-padd h1, 
+    .frame1-text-padd-2 h1, 
     .frame2-text-padd h1, 
      h2.scnd-section-text, 
     .fourth-section h2, 
@@ -451,8 +502,12 @@ hr.bt-grey {
         font-size: calc(1.75rem + 6 * ((100vw - 320px) / 680));
       }
       
-      .frame1-text-padd, .frame2-text-padd {
+      .frame1-text-padd, .frame2-text-padd, .frame1-text-padd-2 {
         padding: 4rem 2rem 1rem !important;
+    }
+    .frame1-text-padd {
+        background-image: url('../images/bg-banner-black-mob-1.png');
+        background-position-y: -40%;
     }
     .pt-sm-5 {
         padding-top: 1.5rem;
@@ -463,6 +518,9 @@ hr.bt-grey {
     .pb-sm-5 {
         padding-bottom: 1.5rem; 
     } 
+    .first-section-legal.legal h1 {
+        padding-bottom: 3rem;
+    }
     nav {
         padding-left: 2.33%;
         padding-right: 2.33%;
@@ -480,6 +538,9 @@ hr.bt-grey {
     }
     .padd-sm-left {
         padding-left: 1.5rem;
+    }
+    .padd-sm-top {
+        padding-top: 1.5rem;    
     }
     .form-control {
         height: calc(6rem + 0.75rem + 2px);
@@ -548,12 +609,12 @@ hr.bt-grey {
         font-size: max(0.8em, 0.93vw);
     }
     .footer-emails a {
-        font-size: 20px;
+        font-size: 14px;
         line-height: 24px;
         font-weight: 500;
     }
     p.footer-city {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 24px;
         font-weight: bold;
     }   
@@ -562,6 +623,7 @@ hr.bt-grey {
     }   
     .sixth-section {
         justify-content: space-around;
+        background-image: url('../images/banner_black_ewo.png');
     }
 }
 
@@ -593,6 +655,12 @@ hr.bt-grey {
     }
     .sixth-section {
         min-height: 60vh;
+    }
+    .footer-emails {
+        background-color: #101010 ;
+        padding-top:3rem;
+        padding-bottom: 3rem;
+        margin-bottom: -3rem;
     }
 } 
 
