@@ -339,8 +339,9 @@ p.footer-p-25 {
 /* second-section-services */
 
 .second-section-services {
-    min-height: 65vh;
-    padding: 5.5vw 6vw;
+    min-height: 66vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
 }
 .second-section-services h2 {
     font-size: 2.8vw;
@@ -354,8 +355,7 @@ p.footer-p-25 {
 }
 .third-section-services h2 {
     font-size: 3vw;
-    padding-top: 2.5vw;
-    padding-bottom: 5.5vw;
+    line-height: 12vw;
 }
 hr.bt-pink {
     border: 1px solid #DA628A;
@@ -391,6 +391,11 @@ hr.bt-grey {
 .fifth-section-services {
     padding-top: 5.5vw;
     padding-bottom: 5.5vw;
+    background-image: url(../images/he-creativew.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
 }
 
 /* LEGAL, PRIVACY */
@@ -664,6 +669,11 @@ hr.bt-grey {
     }
 } 
 
+@media only screen and (max-width: 372px) {
+    a.footer-link {
+        font-size:10px;
+    }
+}
 
 /* nav color change */
 .lite{
