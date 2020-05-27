@@ -250,15 +250,14 @@ h2.scnd-section-text {
     left:80vw; 
 }
 .frame1-text-padd {
-    padding: 6rem !important;
-    flex-grow: 1;
+    padding: 6vw !important;
     background-image: url(../images/banner-dark-short.png);
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
 }
 .frame1-text-padd-2 {
-    padding: 6rem !important;
+    padding: 5vw 5vw 0 5vw !important;
     flex-grow: 1;
     background-image: url(../images/bg-baner-beige.png);
     background-size: contain;
