@@ -497,7 +497,6 @@ hr.bt-grey {
     .frame1-text-padd h1, 
     .frame1-text-padd-2 h1, 
     .frame2-text-padd h1, 
-     h2.scnd-section-text, 
     .fourth-section h2, 
     .sixth-section h2,
     .second-section-services h2,
@@ -506,7 +505,10 @@ hr.bt-grey {
         font-weight: bold;
         font-size: calc(1.75rem + 6 * ((100vw - 320px) / 680));
       }
-      
+      h2.scnd-section-text {
+        font-weight: bold;
+        font-size: calc(2.3rem + 6 * ((100vw - 320px) / 680));          
+      }      
       .frame1-text-padd, .frame2-text-padd, .frame1-text-padd-2 {
         padding: 4rem 2rem 1rem !important;
     }
