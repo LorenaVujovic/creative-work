@@ -1,6 +1,6 @@
 {% extends "base.twig" %}
 {% block content %}
-<div>
+
 <div id="skrollr-body">
 <!-- first section -->
     <div class="container-fluid d-flex flex-column justify-content-center align-items-center"
@@ -39,7 +39,7 @@
                 </p>
             </div>
             <div class="col-12">
-                <a href="services#contact" style="scroll-behavior: smooth;"><img src="images/start-project.png" class="pt-3"/></a>
+                <a href="#contact" style=""><img src="images/start-project.png" class="pt-3"/></a>
             </div>
         </div>
     </div>
@@ -483,7 +483,7 @@
     {% include 'footer.twig' with {'boja' : '#79B2C6'}  %}
 <!-- end footer -->
 </div>
-</div>
+
 <script>
     var menu = document.getElementById("menu")
     var s = skrollr.init({
@@ -501,6 +501,19 @@
         }
         //, skrollrBody:'anchor'
     });
+
+    skrollr.menu.init(s, {
+        //skrollr will smoothly animate to the new position using `animateTo`.
+        animate: true,
+        //The easing function to use.
+    //    easing: 'sqrt',
+
+        //Multiply your data-[offset] values so they match those set in skrollr.init
+    //	scale: 2,
+
+        //Add hash link (e.g. `#foo`) to URL or not.
+      //  updateUrl: false //defaults to `true`.
+    });    
 </script>
 
 
