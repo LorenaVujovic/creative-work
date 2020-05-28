@@ -1,10 +1,10 @@
 {% extends "base.twig" %}
 {% block content %}
-
+<div>
 <div id="skrollr-body">
 <!-- first section -->
-    <div class="container-fluid"
-        data-top="" data-top-bottom="" data-emit-events data-menu="lite">
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center"
+        data-top="" data-top-bottom="" data-emit-events data-menu="lite" style="height:100vh; background-color: #000;">
         <div class="row justify-content-center align-items-center" style="background-color: #000;">
             <img src="images/Do-something-great.jpg" class="img-fluid d-none d-md-block"/>
             <img src="images/services-mob.png" class="img-fluid d-block d-md-none"/>
@@ -21,7 +21,7 @@
                     data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
                     data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                 >Your agency for</h2>
-                <h2 class="font-weight-bold"
+                <h2 class="font-weight-bold pb-5"
                     data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
                     data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                 >branding <br class="d-md-none">
@@ -46,12 +46,8 @@
 <!-- end second services -->
 
 <!-- third section -->
-    <div class="container-fluid third-section-services white"
-        data-top="" data-top-bottom="" data-emit-events data-menu="lite">
-        <div class="row" style="
-            background-image: url(images/the-creative-black.png);
-            background-position: center right;
-            background-size: cover;">
+    <div class="container-fluid third-section-services-heading white">
+        <div class="row bg-services-dark-heading-1" style="">
             <div class="col">
                 <h2 class="my-auto"
                     data-bottom="opacity:0;"
@@ -62,6 +58,10 @@
                 >What we do</h2>
             </div>
         </div>
+    </div>
+    <div class="container-fluid third-section-services white"
+        data-top="" data-top-bottom="" data-emit-events data-menu="lite">
+
         <div class="row py-4">
             <div class="col-12 col-md-5 white">
                 <hr class="bt-pink"
@@ -90,8 +90,16 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    We let your business look great, digitally and the classic way. Brand strategy, brand identity, logo design, 
-                    font design and development, corporate identity, branding guidelines, brand books
+                    We let your business look great, digitally and the classic way.
+                </p>
+                <p class=""
+                    data-bottom="opacity:0;"
+                    data--25p-bottom="opacity:1;" 
+                    data-25p-top="opacity:1;" 
+                    data-top="opacity:0;"
+                >
+                    Brand strategy, brand identity, logo design, font design and development, corporate identity, branding
+                    guidelines, brand books.
                 </p>
             </div>
         </div>
@@ -124,7 +132,7 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Your digital gateway to reach your customer. Let’s make it a great one. 
+                    Your digital gateway to reach your customer. Let’s make it a great one.
                 </p>
                 <p
                     data-bottom="opacity:0;"
@@ -132,8 +140,9 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    UI/UX design, web design & web development, content management systems (CMS), 
-                    search engine optimisation (SEO), automatisations, e-commerce / online shop, newsletter setup, blog setup, mobile apps
+                    UI/UX design, web design &amp; web development, content management systems (CMS), search engine
+                    optimisation (SEO), automatisations, e-commerce / online shop, newsletter setup, blog setup, mobile
+                    apps.
                 </p>
             </div>
         </div>
@@ -166,7 +175,7 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Tell your story the way everyone is excited about. In wirtten, stills, motion and auditive.
+                    Tell your story the way everyone is excited about. In written, stills, motion and auditive.
                 </p>
                 <p
                     data-bottom="opacity:0;"
@@ -174,7 +183,7 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Texts , Photography , Video productions , Promotional clips , Animations , 3D renderings , Audio productions
+                    Texts, photography, video production promotional clips, animations, 3D renderings, audio production.
                 </p>
             </div>
         </div>
@@ -207,9 +216,60 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Let people know how great you are. You deserve it. We support you in setting you up to get the word out there, 
-                    digitally and in print. Social media setup, landing pages, banner design, POS & hospitality design, brochures & catalogues, 
-                    restaurant menu, business cards, stationary, posters & flyers, packaging design 
+                    Let people know how great you are. You deserve it. We support you in setting you up to get the word
+                    out there, digitally and in print.
+                </p>
+                <p class=""
+                    data-bottom="opacity:0;"
+                    data--25p-bottom="opacity:1;" 
+                    data-25p-top="opacity:1;" 
+                    data-top="opacity:0;"
+                >
+                    Social media setup, landing pages, banner design, POS &amp; hospitality design, brochures &amp; catalogues,
+                    restaurant menu, business cards, stationary, posters &amp; flyers, packaging design.
+                </p>
+            </div>
+        </div>
+
+        <div class="row py-4">
+            <div class="col-12 col-md-5 white">
+                <hr class="bt-pink"
+                    data-bottom="opacity:0;"
+                    data--15p-bottom="opacity:1;" 
+                    data-15p-top="opacity:1;" 
+                    data-top="opacity:0;"
+                ></hr>
+                <h3
+                    data-bottom="opacity:0;"
+                    data--25p-bottom="opacity:1;" 
+                    data-25p-top="opacity:1;" 
+                    data-top="opacity:0;">
+                    Consulting
+                </h3>
+            </div>
+            <div class="col-12 col-md-7 white">
+                <hr class="bt-pink d-none d-md-block"
+                    data-bottom="opacity:0;"
+                    data--15p-bottom="opacity:1;" 
+                    data-15p-top="opacity:1;" 
+                    data-top="opacity:0;"
+                ></hr>
+                <p class=""
+                    data-bottom="opacity:0;"
+                    data--25p-bottom="opacity:1;" 
+                    data-25p-top="opacity:1;" 
+                    data-top="opacity:0;"
+                >
+                    We support you in opening up new sales channels, communicate more efficiently with your customers
+                    and get more out of your daily business.
+                </p>
+                <p class=""
+                    data-bottom="opacity:0;"
+                    data--25p-bottom="opacity:1;" 
+                    data-25p-top="opacity:1;" 
+                    data-top="opacity:0;"
+                >
+                    Retail consulting, start-up consulting, market analysis, trend analysis, employee training, workshops.
                 </p>
             </div>
         </div>
@@ -247,7 +307,7 @@
                     data--25p-bottom="opacity:1;" 
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;">
-                        Start-up
+                        Startups
                 </h3>
             </div>
             <div class="col-12 col-md-7">
@@ -263,8 +323,8 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Having started ourselves at some point, we know about the hazzle it can be. We offer special packages for young companies 
-                    to make sure you can present your ideas to the world.
+                    Having started ourselves at some point, we know about the hazzle it can be. We offer special packages
+                    for young companies to make sure you can present your ideas to the world.
                 </p>
             </div>
         </div>
@@ -297,7 +357,8 @@
                     data-15p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    We love to work with artists, photographers, coaches, gym & yoga teachers, and everyone who wants to push your own business forward.
+                    We love to work with artists, photographers, coaches, gym &amp; yoga teachers, and everyone who wants to
+                    push your own business forward.
                 </p>
             </div>
         </div>
@@ -330,8 +391,8 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Let it be a re-design of your menu, a new logo or a full branding for your bar, restaurant or boutique hotel. 
-                    We are happy to support you with all of it, so that others can enjoy your amazing offer too.
+                    Let it be a re-design of your menu, a new logo or a full branding for your bar, restaurant or boutique
+                    hotel. We are happy to support you with all of it, so that others can enjoy your amazing offer too.
                 </p>
             </div>
         </div>
@@ -348,7 +409,7 @@
                     data--25p-bottom="opacity:1;" 
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;">
-                    S/M companies
+                    s/m companies
                 </h3>
             </div>
             <div class="col-12 col-md-7">
@@ -364,8 +425,8 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Small and medium sized companies are the backbone of every economy. 
-                    Focus on your core business, we'll take care to get your companies appearance on the next level.
+                    Small and medium sized companies are the backbone of every economy. Focus on your core business,
+                    we&#39;ll take care to get your comapnies appearance on the next level.
                 </p>
             </div>
         </div>
@@ -382,7 +443,7 @@
                     data--25p-bottom="opacity:1;" 
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;">
-                Retail businesses
+                    Retail businesses
                 </h3>
             </div>
             <div class="col-12 col-md-7">
@@ -398,7 +459,8 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    We've learned from the best how to present your offer the best way throughout all sales channels, online and offline.
+                    We&#39;ve learned from the best how to present your offer the best way throughout all sales channels,
+                    online and offline.
                 </p>
             </div>
         </div>
@@ -420,6 +482,7 @@
 <!-- footer -->
     {% include 'footer.twig' with {'boja' : '#79B2C6'}  %}
 <!-- end footer -->
+</div>
 </div>
 <script>
     var menu = document.getElementById("menu")
