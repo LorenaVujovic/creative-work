@@ -15,6 +15,9 @@ body {
   color: #7E7E7E;
   overflow-x: hidden;
 }
+.h-100-projects {
+    height: 100vh;
+}
 :focus {
     outline: none;
     outline-color: none;
@@ -479,7 +482,14 @@ hr.bt-grey {
         line-height: 1.5rem;
     }
 }
-
+@media (min-width: 767px) and (max-width: 1025px) {
+    .h-100-projects {
+        height: 60vh !important;
+    }
+    img.project-img-fit {
+        height: 100%;
+    }
+}
 @media only screen and (max-width: 992px) {
     .s2c1 {
         width:100vw;
@@ -498,6 +508,12 @@ hr.bt-grey {
         margin: 0;
         height: 100%;
         overflow: hidden;
+    }
+    #navnumber {
+        font-weight: bold;
+    }
+    .h-100-projects {
+        height: 92vh;
     }
     .frame1-text-padd-2  {
         flex-grow: unset;
@@ -533,8 +549,11 @@ hr.bt-grey {
     font-weight: bold;
     font-size: calc(2.3rem + 6 * ((100vw - 320px) / 680));          
     }      
-    .frame1-text-padd, .frame2-text-padd, .frame1-text-padd-2 {
+    .frame1-text-padd, .frame2-text-padd  {
     padding: 4rem 2rem 1rem !important;
+    }
+    .frame1-text-padd-2 {
+        padding: 3rem 2rem 1rem !important;
     }
     .frame1-text-padd {
         background-image: url('../images/bg-banner-black-mob-1.png');
