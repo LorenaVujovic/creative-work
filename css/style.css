@@ -498,6 +498,16 @@ hr.bt-grey {
         height: 100%;
         overflow: hidden;
     }
+    .frame1-text-padd-2  {
+        flex-grow: unset;
+        background-image: url(../images/cre-banner-2.png);
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+    .frame1-text-padd {
+        padding: unset;
+    }
     .fourth-section {
         height: 0;
         overflow: hidden;
