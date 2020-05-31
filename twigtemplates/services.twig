@@ -485,6 +485,7 @@
 </div>
 
 <script>
+window.addEventListener('load', function() {
     var menu = document.getElementById("menu")
     var s = skrollr.init({
         forceHeight:false
@@ -492,16 +493,16 @@
             if( name=='dataTopBottom' && direction=='down') return // ignorisemo bottom ako ide dolje
             if( name=='data20Top' && direction=='up') return 
             if( name=='dataTop' && direction=='up') return 
+            if (element.classList.contains('fourth-section') && (window.innerHeight<768) ) return
             var clas = (element && element.dataset)?element.dataset.menu:null;
-            console.log('menu class:', clas, element.id, name, direction )
+            console.log('menu class:', clas, element.id, name, direction, element )
             if (!clas) return
             menu.classList.remove('lite'); 
             menu.classList.remove('dark');
             menu.classList.add(clas);
         }
-        //, skrollrBody:'anchor'
+       // , skrollrBody:'projects'
     });
-
     skrollr.menu.init(s, {
         //skrollr will smoothly animate to the new position using `animateTo`.
         animate: true,
@@ -514,6 +515,8 @@
         //Add hash link (e.g. `#foo`) to URL or not.
       //  updateUrl: false //defaults to `true`.
     });    
+
+})
 </script>
 
 
