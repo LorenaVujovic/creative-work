@@ -503,7 +503,7 @@ hr.bt-grey {
     
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
     html, body {
         margin: 0;
         height: 100%;
