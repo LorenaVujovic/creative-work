@@ -364,7 +364,7 @@ p.footer-p-25 {
     padding: 5.5vw 10vw;
 }
 .third-section-services-heading {
-    padding: 5.5vw 0 5.5vw 10vw;    
+    padding: 5.5vw 0vw 0vw 10vw;
 }
 .bg-services-dark-heading-1 {
     background-image: url(../images/the-creative-black.png);
@@ -375,7 +375,7 @@ p.footer-p-25 {
 }
 .third-section-services-heading h2 {
     font-size: 3vw;
-    line-height: 17vw;
+    line-height: 16vw;
 }
 hr.bt-pink {
     border: 1px solid #DA628A;
@@ -687,11 +687,12 @@ hr.bt-grey {
         background-image: url('../images/banner_black_ewo.png');
     }
     .third-section-services-heading h2 {
-        font-size: 2rem;
+        font-size: 2.7rem;
         line-height: 17vw;
     }
-    .we-love h2 {
- 
+    .fourth-bg-text h2 {
+        font-size: 2.7rem;
+        line-height: 9vw;
     }
     .fourth-bg-text {
         background-image: unset;
