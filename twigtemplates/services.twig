@@ -495,7 +495,7 @@ window.addEventListener('load', function() {
             if( name=='dataTop' && direction=='up') return 
             if (element.classList.contains('fourth-section') && (window.innerHeight<768) ) return
             var clas = (element && element.dataset)?element.dataset.menu:null;
-            console.log('menu class:', clas, element.id, name, direction, element )
+            //console.log('menu class:', clas, element.id, name, direction, element )
             if (!clas) return
             menu.classList.remove('lite'); 
             menu.classList.remove('dark');
