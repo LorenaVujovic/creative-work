@@ -157,61 +157,64 @@ end second section -->
 <div class="owl-carousel owl-theme h-100-projects" id="projects" style=""
     data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
 
+    {% set Projects = fetch("Projects") %}
+    {% for item in Projects %}
+    {% if loop.index0 is even %}
     <div class="container-fluid m-0 p-0 item h-100-projects" style="">
-        <div class="row no-gutters" style="height: 100%;">
+        <div class="row no-gutters h-100-projects" style="min-width: 100vw;">
             <div class="col-12 col-md-6 order-2 order-md-1 d-none d-md-block">
-                <img src="images/portfolio-1.png" class="w-100" style="object-fit: cover; height:100%;"/>
+                <img src="img/{{item.LargeImage}}" class="w-100" style="object-fit: cover; height:100%;"/>
             </div>
             <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start white order-1 order-md-2">                
                 <div class="w-lg-50 frame1-text-padd">
-                    <h1>JOEFALK /  <br class="d-md-none">1850.</h1>
+                    <h1 class="pre-wrap-sm">{{item.Title}}</h1>
                     <p class="pt-sm-6">
-                        A garment brand for products made in Germany. We developed the branding strategy, did the web design, 
-                        created the online shop, managed photo- and video-shoots, created product brochures for the international market and wrote several texts.
+                        {{item.Text}}
                     </p>
                 </div>
-                <img src="images/portfolio-2.png" style="width:100%;" class="p-0" />             
+                <img src="img/{{item.mob_image}}" style="" class="p-0 d-block d-md-none w-100" />    
+                <img src="img/{{item.SmallImage}}" style="width:100%;flex-grow: 1;" class="p-0 d-none d-md-block" />          
             </div>
         </div>
     </div>
-
+    {% else %}
     <div class="container-fluid m-0 p-0 item h-100-projects" style="">
         <div class="row no-gutters h-100-projects" style="min-width: 100vw;">
             <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start" style="height:100%; background-color: #fff;">
-                <img src="images/portfolio-3.jpg" class="w-100 d-none d-md-block" style=""/>
+                <img src="img/{{item.SmallImage}}" class="w-100 d-none d-md-block" style=""/>
                 <div class="w-lg-50 frame1-text-padd-2 bg-white">
-                    <h1>the GERMAN <br class="d-md-none">BAKERS</h1>
+                    <h1 class="pre-wrap-sm">{{item.Title}}</h1>
                     <p class="pt-sm-6" style="">
-                        A catering concept for the airline industry. 
-                        We developed the whole branding, the design for the product catalogue, stationary and developed a sales & marketing strategy.
+                        {{item.Text}}
                     </p>
                 </div>
-                <img src="images/german-bakers-mob.png" style="" class="d-block d-md-none" />   
+                <img src="img/{{item.mob_image}}" style="" class="d-block d-md-none" />   
             </div>
             <div class="col-12 col-md-6 d-none d-md-block white">                
-                <img src="images/portfolio-4.jpg" style="width:100%;flex-grow: 1;" class="p-0 d-none d-md-block project-img-fit" />                       
+                <img src="img/{{item.LargeImage}}" style="width:100%;flex-grow: 1;" class="p-0 d-none d-md-block project-img-fit" />                       
             </div>
         </div>
     </div>
-    
-    <div class="container-fluid m-0 p-0 item h-100-projects" style="">
-        <div class="row no-gutters h-100-projects" style="">
-            <div class="col-12 col-md-6 d-none d-md-block">
-                <img src="images/portfolio-5.png" class="w-100 h-100-projects" style="object-fit: cover;"/>
-            </div>
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start white">                
-                <div class="w-lg-50 frame1-text-padd">
-                    <h1>LA JOIE</h1>
-                    <p class="pt-sm-6">
-                        A French bistro concept for the German market. 
-                        We supported this new concept with POS and packaging design as well as with the creation of a pitch deck and start up advisory.                    
-                    </p>
+    {% endif %}
+    {% endfor %}
+        <!--    <div class="container-fluid m-0 p-0 item h-100-projects" style="">
+                <div class="row no-gutters h-100-projects" style="">
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                        <img src="images/portfolio-5.png" class="w-100 h-100-projects" style="object-fit: cover;"/>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start white">                
+                        <div class="w-lg-50 frame1-text-padd">
+                            <h1 class="pre-wrap-sm">LA JOIE</h1>
+                            <p class="pt-sm-6">
+                                A French bistro concept for the German market. 
+                                We supported this new concept with POS and packaging design as well as with the creation of a pitch deck and start up advisory.                    
+                            </p>
+                        </div>
+                        <img src="images/bistro-mob.png" style="" class="p-0 d-block d-md-none w-100" /> 
+                        <img src="images/portfolio-6.png" style="width:100%;flex-grow: 1;" class="p-0 d-none d-md-block" />             
+                    </div>
                 </div>
-                <img src="images/bistro-mob.png" style="margin-right: -5px; overflow: visible;" class="p-0 d-block d-md-none w-100" /> 
-                <img src="images/portfolio-6.png" style="width:100%;flex-grow: 1;" class="p-0 d-none d-md-block" />             
-            </div>
-        </div>
-    </div>
+            </div> -->
 
 </div>
 

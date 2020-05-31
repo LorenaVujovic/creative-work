@@ -282,6 +282,9 @@ h2.scnd-section-text {
 .w-lg-60 {
     width: 60%;
 }
+.pre-wrap-sm {
+    white-space: normal;
+}
 /* sixth section*/
 
 .sixth-section {
@@ -704,6 +707,9 @@ hr.bt-grey {
     }
 }
 @media only screen and (max-width: 600px) {
+    .pre-wrap-sm {
+        white-space: pre-wrap;
+    }
     .fourth-bg-text {
         background-image: unset;
         height: 100%;
