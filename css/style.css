@@ -509,6 +509,10 @@ hr.bt-grey {
         height: 100%;
         overflow: hidden;
     }
+    a.footer-link {
+        color: #555454;
+        font-size: small;
+    }
     #navnumber {
         font-weight: bold;
     }
@@ -683,15 +687,31 @@ hr.bt-grey {
         font-size: 2rem;
         line-height: 17vw;
     }
+    .we-love h2 {
+ 
+    }
     .fourth-bg-text {
-        background-image: unset;  /*url('../images/cre-banner.png');*/
-        background-repeat: no-repeat;
-        background-position-x: left;
-        background-size: contain;
-        height: 14.5vw;
+        background-image: unset;
+        height: 100%;
+    }
+    .we-love {
+        background-image: unset;  /**/
+        height: 30vw;
     }
 }
-
+@media only screen and (max-width: 600px) {
+    .fourth-bg-text {
+        background-image: unset;
+        height: 100%;
+    }
+    .we-love {
+        background-image: url('../images/cre-banner.png');  /**/
+        background-repeat: no-repeat;
+        background-position-x: 10vw;
+        background-size: contain;
+        height: 56vw;
+    }
+}
 @media only screen and (max-width: 567px) {
     .second-section-services h2 {
         font-size: calc(1.4rem + 6 * ((100vw - 320px) / 680));
