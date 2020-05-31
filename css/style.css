@@ -545,6 +545,10 @@ hr.bt-grey {
         font-weight: bold;
         font-size: calc(1.75rem + 6 * ((100vw - 320px) / 680));
     }
+    .fourth-bg-text h2 {
+        line-height: calc(2rem + 6 * ((100vw - 320px) / 680));
+        font-size: calc(1.75rem + 6 * ((100vw - 320px) / 680));
+    }
     h2.scnd-section-text {
     font-weight: bold;
     font-size: calc(2.3rem + 6 * ((100vw - 320px) / 680));          
@@ -680,7 +684,7 @@ hr.bt-grey {
         line-height: 17vw;
     }
     .fourth-bg-text {
-        background-image: url('../images/cre-banner.png');
+        background-image: unset;  /*url('../images/cre-banner.png');*/
         background-repeat: no-repeat;
         background-position-x: left;
         background-size: contain;
