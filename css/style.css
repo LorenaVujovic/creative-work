@@ -694,9 +694,13 @@ hr.bt-grey {
         background-image: unset;
         height: 100%;
     }
-    .we-love {
+    .we-love, .we-do {
         background-image: unset;  /**/
         height: 30vw;
+    }
+    .bg-services-dark-heading-1 {
+        background-image: unset;
+        height: 100%;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -710,6 +714,17 @@ hr.bt-grey {
         background-position-x: 10vw;
         background-size: contain;
         height: 56vw;
+    }
+    .we-do {
+        background-image: url('../images/cre-grey.png');  /**/
+        background-repeat: no-repeat;
+        background-position-x: 10vw;
+        background-size: contain;
+        height: 56vw;        
+    }
+    .we-do h2 {
+        position: relative;
+        top: 48%;
     }
 }
 @media only screen and (max-width: 567px) {
