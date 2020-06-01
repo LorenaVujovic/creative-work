@@ -308,9 +308,10 @@ h2.scnd-section-text {
 }
 h1.footer-xxl {
     font-weight: bold;
-    font-size: 18vw;
-    line-height: 28vw;
+    font-size: 9vw;
+    line-height: 13vw;
     letter-spacing: -0.04em;
+    padding-bottom: 1rem;
 }
 .pb-footer-top {
     padding-top: 5vw;
