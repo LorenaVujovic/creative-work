@@ -98,7 +98,7 @@ h2.scnd-section-text {
     background-image: url(../images/thecreativeworkco.svg);
     background-position: calc(100% - 0px) calc(100% - 0px);
     background-repeat: no-repeat;
-    background-size: 90% auto;
+    background-size: 100% auto;
 }
 .third-section h3 {
     font-size:3vw;
@@ -127,7 +127,7 @@ h2.scnd-section-text {
 }
 .fourth-bg-text h2 {
     font-weight: bold;
-    font-size: 2.13vw;
+    font-size: 3vw;
     line-height: 4vw;
     position: relative;
     top: 48%;
@@ -357,6 +357,7 @@ p.footer-p-25 {
 }
 .second-section-services h2 {
     font-size: 2.8vw;
+    color: #555454;
 }
 
 /* third-section-services */
@@ -394,16 +395,17 @@ hr.bt-grey {
 /* fourth-section services */
 
 .fourth-section-services-1 {
-    padding: 5.5vw 0vw 5.5vw 10vw;
+    background-image: url('../images/the-creativework-co-siva.png');
+    background-repeat: no-repeat;
+    background-position-x: -4rem;
+    background-position-y: 4.5vw;
+    background-size: 110%;
 }
 .fourth-section-services-2 {
     padding: 0vw 10vw 5.5vw 10vw;
 }
 .fourth-bg-text {
-    background-image: url('../images/beige-banner-2.png');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-size: contain;
+    padding: 5.5vw 0vw 5.5vw 10vw;
     height: 14.5vw;
 }
 
@@ -693,7 +695,7 @@ hr.bt-grey {
     }
     .fourth-bg-text h2 {
         font-size: 2.7rem;
-        line-height: 9vw;
+        line-height: 10vw;
     }
     .fourth-bg-text {
         background-image: unset;

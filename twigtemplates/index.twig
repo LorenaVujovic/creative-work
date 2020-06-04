@@ -123,7 +123,7 @@ end second section -->
                     The branding and web design agency that lets your business look great. Based in 
                     <span
                     data--25p-bottom="color: rgb(126, 126, 126);" 
-                    data--60p-bottom="color: rgb(218, 98, 138)"  
+                    data--40p-bottom="color: rgb(218, 98, 138)"  
                         >Munich, Cologne, Belgrade and Dubai.</span>
                 </p>
             </div>       
@@ -148,7 +148,7 @@ end second section -->
                 <h2 class="font-weight-bold text-transform-uppercase"
                     data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
                     data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
-                    >PROJECTS</h2>
+                    >projects</h2>
             </div>
         </div>
     </div>   
@@ -156,28 +156,34 @@ end second section -->
 
 <div class="owl-carousel owl-theme h-100-projects" id="projects" style=""
     data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
-
-    {% set Projects = fetch("Projects") %}
-    {% for item in Projects %}
-    {% if loop.index0 is even %}
     <div class="container-fluid m-0 p-0 item h-100-projects" style="">
         <div class="row no-gutters h-100-projects" style="min-width: 100vw;">
             <div class="col-12 col-md-6 order-2 order-md-1 d-none d-md-block">
-                <img src="img/{{item.LargeImage}}" class="w-100" style="object-fit: cover; height:100%;"/>
+                <img src="images/portfolio-1.png" class="w-100" style="object-fit: cover; height:100%;"/>
             </div>
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start white order-1 order-md-2">                
-                <div class="w-lg-50 frame1-text-padd">
-                    <h1 class="pre-wrap-sm">{{item.Title}}</h1>
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-start align-items-start white order-1 order-md-2">     
+                <div>
+                    <video style="outline:none; height:100%; width:100%; " controls>
+                        <source src="videos/JF1850-MASTER-HD.mp4" type="video/mp4">
+                        <source src="videos/JF1850-MASTER-HD.ogg" type="video/ogg">
+                    </video>
+                </div>
+                <div class="w-lg-50 frame1-text-padd" style="flex-grow: 1;">
+                    <h1 class="pre-wrap-sm">JOEFALK / <br class="d-block d-md-none"/> 1850.</h1>
                     <p class="pt-sm-6">
-                        {{item.Text}}
+                        A garment brand for products made in Germany. We developed the branding strategy, did the web design, created the online shop, 
+                        managed photo and video-shoots, created product brochures for the international market and wrote several texts.
                     </p>
                 </div>
-                <img src="img/{{item.mob_image}}" style="" class="p-0 d-block d-md-none w-100" />    
-                <img src="img/{{item.SmallImage}}" style="width:100%;flex-grow: 1;" class="p-0 d-none d-md-block" />          
+
+                <!--<img src="images/portfolio-2.png" style="" class="p-0 d-block d-md-none w-100" />    
+                <img src="img/{{item.SmallImage}}" style="width:100%;flex-grow: 1;" class="p-0 d-none d-md-block" /> -->         
             </div>
         </div>
     </div>
-    {% else %}
+    {% set Projects = fetch("Projects") %}
+    {% for item in Projects %}
+    {% if loop.index0 is even %}
     <div class="container-fluid m-0 p-0 item h-100-projects" style="">
         <div class="row no-gutters h-100-projects" style="min-width: 100vw;">
             <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start" style="height:100%; background-color: #fff;">
@@ -192,6 +198,24 @@ end second section -->
             </div>
             <div class="col-12 col-md-6 d-none d-md-block white">                
                 <img src="img/{{item.LargeImage}}" style="width:100%;flex-grow: 1;" class="p-0 d-none d-md-block project-img-fit" />                       
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="container-fluid m-0 p-0 item h-100-projects" style="">
+        <div class="row no-gutters h-100-projects" style="min-width: 100vw;">
+            <div class="col-12 col-md-6 order-2 order-md-1 d-none d-md-block">
+                <img src="img/{{item.LargeImage}}" class="w-100" style="object-fit: cover; height:100%;"/>
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start white order-1 order-md-2">                
+                <div class="w-lg-50 frame1-text-padd">
+                    <h1 class="pre-wrap-sm">{{item.Title}}</h1>
+                    <p class="pt-sm-6">
+                        {{item.Text}}
+                    </p>
+                </div>
+                <img src="img/{{item.mob_image}}" style="" class="p-0 d-block d-md-none w-100" />    
+                <img src="img/{{item.SmallImage}}" style="width:100%;flex-grow: 1;" class="p-0 d-none d-md-block" />          
             </div>
         </div>
     </div>
@@ -234,7 +258,7 @@ end second section -->
                 <h2 class="font-weight-bold"
                     data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
                     data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);"             
-                    >MADE IN GERMANY
+                    >made in Germany
                 </h2>
             </div>
         </div>

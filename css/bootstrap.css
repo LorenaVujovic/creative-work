@@ -2039,7 +2039,7 @@ pre code {
   font-weight: 400;
   line-height: 1.5;
   color: #fff;
-  background-color: #0A0A0A;
+  background-color: transparent;
   background-clip: padding-box;
   border-bottom: 1px solid #D7D7D7;
   border-top: none;
