@@ -49,7 +49,6 @@ body {
     position: relative;
     top: 6px;
 }
-
 nav {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -451,10 +450,11 @@ hr.bt-grey {
     /*padding-top: 6.4vw;   */ 
 }
 .section-legal-2 {
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     background-color: #000;
     color: #fff;
-    /*padding-top: 6.4vw;   */ 
+    padding-top: 5vw; 
+    padding-bottom: 5vw; 
 }
 .section-legal-0 h2,
 .section-legal-1 h2,
@@ -548,12 +548,14 @@ hr.bt-grey {
     .frame1-text-padd-2 h1, 
     .frame2-text-padd h1, 
     .fourth-section h2, 
-    .sixth-section h2,
     .second-section-services h2,
     .third-section-services h2,
     .fourth-bg-text h2 {
         font-weight: bold;
         font-size: calc(1.75rem + 6 * ((100vw - 320px) / 680));
+    }
+    .sixth-section h2 {
+        font-size: calc(2.1rem + 6 * ((100vw - 320px) / 680));
     }
     .fourth-bg-text h2 {
         line-height: calc(2rem + 6 * ((100vw - 320px) / 680));
@@ -619,6 +621,9 @@ hr.bt-grey {
         line-height: 22px;
         letter-spacing: -0.04em;
     }
+    #contact {
+        padding-top: 5vw;
+    }
     .footer-p-25 {
         font-size: 18px;
         line-height: 22px;
@@ -646,8 +651,8 @@ hr.bt-grey {
         font-weight: normal !important;
     }
     .serv-your {
-        font-size: 20px !important;
-        line-height: 23px;
+        font-size: calc(1.8rem + 6 * ((100vw - 320px) / 680));
+        line-height: calc(2rem + 6 * ((100vw - 320px) / 680));
     }
     .fourth-section-services-2 {
         margin-top: -1px;
@@ -739,7 +744,8 @@ hr.bt-grey {
 }
 @media only screen and (max-width: 567px) {
     .second-section-services h2 {
-        font-size: calc(1.4rem + 6 * ((100vw - 320px) / 680));
+        font-size: calc(1.8rem + 6 * ((100vw - 320px) / 680));
+        line-height: calc(2rem + 6 * ((100vw - 320px) / 680));
     }
     .navigation a:not(:first-child) {
         padding-left:0;
@@ -779,7 +785,14 @@ hr.bt-grey {
         font-size:10px;
     }
 }
-
+@media only screen and (max-width: 361px) {
+    .frame1-text-padd {
+        padding: 1rem 2rem 1rem !important;
+    }
+    .pt-sm-6 {
+        padding-top: 1rem;
+    }
+}
 /* nav color change */
 .lite{
     background-color: transparent;
