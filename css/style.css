@@ -453,8 +453,8 @@ hr.bt-grey {
     /*min-height: 100vh;*/
     background-color: #000;
     color: #fff;
-    padding-top: 5vw; 
-    padding-bottom: 5vw; 
+    padding-top: 1vw; 
+    padding-bottom: 1vw; 
 }
 .section-legal-0 h2,
 .section-legal-1 h2,
@@ -724,10 +724,11 @@ hr.bt-grey {
         height: 100%;
     }
     .we-love {
-        background-image: url('../images/cre-banner.png');  /**/
+        background-image: url('../images/crea-banner-mob.png');  /**/
         background-repeat: no-repeat;
-        background-position-x: 10vw;
-        background-size: contain;
+        background-position-x: -3vw;
+        background-position-y: 4vh;
+        background-size: 103%;
         height: 56vw;
     }
     .we-do {
