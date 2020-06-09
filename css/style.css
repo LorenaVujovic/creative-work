@@ -435,6 +435,10 @@ p.footer-p-25 {
     text-decoration: none;
     color: #fff;
 }
+.px-md-5 {
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
 /* second section legal */
 
 .section-legal-0 {
@@ -514,6 +518,10 @@ p.footer-p-25 {
         margin: 0;
         height: 100%;
         overflow: hidden;
+    }
+    .px-md-5 {
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
     a.footer-link {
         color: #555454;
@@ -741,6 +749,10 @@ p.footer-p-25 {
     .we-do h2 {
         position: relative;
         top: 48%;
+    }
+    .px-sm-0 {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 @media only screen and (max-width: 567px) {
