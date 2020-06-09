@@ -378,16 +378,16 @@ p.footer-p-25 {
     font-size: 3vw;
     line-height: 16vw;
 }
-hr.bt-pink {
-    border: 1px solid #DA628A !important;
-    width: 96%;
-    text-align:left !important;
+.bt-pink {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     margin-left:0 !important;
+    /*width: 96%;
+    text-align:left !important;*/
 }
-hr.bt-grey {
-    border:1px solid #79B2C6 !important;
-    width: 96%;
-    text-align:left !important;
+.bt-grey {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     margin-left:0 !important;
 }
 
