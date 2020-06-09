@@ -69,13 +69,25 @@
                 <div class="row" style="">
                     <div class="col col-md-6 offset-md-3 pt-5 px-5">
                         {% if item.SmallTitle != '' %}
-                        <h5 class="font-weight-bold pb-5"              
+                        <h5 class="font-weight-bold pb-5"
+                            data-bottom-top="opacity:0;"
+                            data--25p-bottom-top="opacity:1;" 
+                            data-35p-top-bottom="opacity:1;" 
+                            data-60-top-bottom="opacity:0;"                   
                         >{{item.SmallTitle}}</h5>   
                         {% endif %}                 
-                        <h2 class="font-weight-bold pb-5"               
+                        <h2 class="font-weight-bold pb-5"
+                            data-bottom-top="opacity:0;"
+                            data--25p-bottom-top="opacity:1;" 
+                            data-35p-top-bottom="opacity:1;" 
+                            data-60-top-bottom="opacity:0;"                   
                         >{{item.Title | raw}}</h2>
                         <p class="pb-4"
-                            style="white-space: pre-wrap; word-wrap: break-word;"               
+                            style="white-space: pre-wrap; word-wrap: break-word;"
+                            data-bottom-top="opacity:0;"
+                            data--25p-bottom-top="opacity:1;" 
+                            data-35p-top-bottom="opacity:1;" 
+                            data-60-top-bottom="opacity:0;"                   
                         >{{item.Text}}</p>                
                     </div>
                     <div class="col-md-3"></div>
@@ -90,6 +102,7 @@
 </div>
 
 <script>
+window.addEventListener('load', function() {
     var menu = document.getElementById("menu")
     var s = skrollr.init({
         forceHeight:false
@@ -97,14 +110,29 @@
             if( name=='dataTopBottom' && direction=='down') return // ignorisemo bottom ako ide dolje
             if( name=='data20Top' && direction=='up') return 
             if( name=='dataTop' && direction=='up') return 
+            if (element.classList.contains('fourth-section') && (window.innerHeight<768) ) return
             var clas = (element && element.dataset)?element.dataset.menu:null;
-            console.log('menu class:', clas, element.id, name, direction )
+            //console.log('menu class:', clas, element.id, name, direction, element )
             if (!clas) return
             menu.classList.remove('lite'); 
             menu.classList.remove('dark');
             menu.classList.add(clas);
         }
-        //, skrollrBody:'anchor'
+       // , skrollrBody:'projects'
     });
+    skrollr.menu.init(s, {
+        //skrollr will smoothly animate to the new position using `animateTo`.
+        animate: true,
+        //The easing function to use.
+    //    easing: 'sqrt',
+
+        //Multiply your data-[offset] values so they match those set in skrollr.init
+    //	scale: 2,
+
+        //Add hash link (e.g. `#foo`) to URL or not.
+      //  updateUrl: false //defaults to `true`.
+    });    
+
+})
 </script>
 {% endblock %}
