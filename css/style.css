@@ -812,6 +812,9 @@ p.footer-p-25 {
         font-size: 30px;
         line-height: 39px;
     }
+    .second-section-services {
+        min-height: 76vh;
+    }
 }
 /* nav color change */
 .lite{
