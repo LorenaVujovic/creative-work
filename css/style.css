@@ -257,13 +257,13 @@ h2.scnd-section-text {
     display: flex;
     left:80vw; 
 }
-.frame1-text-padd {
+/*.frame1-text-padd {
     padding: 6vw !important;
     background-image: url(../images/banner-dark-short.png);
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-}
+}*/
 .frame1-text-padd-2 {
     padding: 5vw 5vw 0 5vw !important;
     flex-grow: 1;
@@ -369,10 +369,11 @@ p.footer-p-25 {
     padding: 5.5vw 0vw 0vw 10vw;
 }
 .bg-services-dark-heading-1 {
+    /*
     background-image: url(../images/the-creative-black.png);
     background-position-x: right;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
     height: 14.5vw;
 }
 .third-section-services-heading h2 {
@@ -414,11 +415,12 @@ p.footer-p-25 {
 .fifth-section-services {
     padding-top: 5.5vw;
     padding-bottom: 5.5vw;
+    /*
     background-image: url(../images/he-creativew.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-
+    */
 }
 
 /* LEGAL, PRIVACY */
