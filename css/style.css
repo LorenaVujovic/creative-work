@@ -257,13 +257,13 @@ h2.scnd-section-text {
     display: flex;
     left:80vw; 
 }
-/*.frame1-text-padd {
+.frame1-text-padd {
     padding: 6vw !important;
-    background-image: url(../images/banner-dark-short.png);
+    /*background-image: url(../images/banner-dark-short.png);
     background-size: contain;
     background-position: bottom;
-    background-repeat: no-repeat;
-}*/
+    background-repeat: no-repeat;*/
+}
 .frame1-text-padd-2 {
     padding: 5vw 5vw 0 5vw !important;
     flex-grow: 1;
@@ -314,7 +314,7 @@ h1.footer-xxl {
     padding-bottom: 1rem;
 }
 .pb-footer-top {
-    padding-top: 5vw;
+    padding-top: 1rem;
 }
 .pb-footer-bottom {
     padding-bottom: 5vw;
