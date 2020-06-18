@@ -33,6 +33,7 @@
             {% set c = (_GET[0] in ['','index']) ?'255':'0' %}
             <ul class="navigation d-flex mb-0 font-weight-bold" id="menu">
                 <li class="d-inline " style="flex:1">
+                    <!--
                     <a href="index" style="display:inline-block; position:relative" class="nav-link font-weight-bold" >
                     <span
                         data-0="display:!inline;"
@@ -41,7 +42,8 @@
                     <span
                         data-0="display:!none;"
                         data-20="display:!inline;"                       
-                    >tc.</span>
+                    >
+                    </span>
                         <div style="position:absolute; left:0; top:0; right:0; bottom:0; 
                         background: linear-gradient(90deg, rgba({{c}},{{c}},{{c}},0) 0%, rgba({{c}},{{c}},{{c}},1) 100%);"
                         data-0="background: linear-gradient(0deg, rgba({{c}},{{c}},{{c}},0) 90%, rgba({{c}},{{c}},{{c}},1) 100%);"
@@ -50,7 +52,11 @@
                         > 
                         </div>
                     </a>
-
+                    -->
+                    <a href="index" style="display:inline-block; position:relative" class="nav-link font-weight-bold" >
+                        <span class="d-none d-md-inline">the creativework co.</span>
+                        <span class="d-inline d-md-none">tc.</span>
+                    </a>
                 </li>
                 <li class="d-inline ">
                     <a class="nav-link" href="{{_GET[0] in ['','index']? '#projects': 'index#projects'}}">Projects</a> 

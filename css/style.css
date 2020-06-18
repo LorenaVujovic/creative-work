@@ -287,10 +287,11 @@ h2.scnd-section-text {
 /* sixth section*/
 
 .sixth-section {
+    /*
     background-image: url(../images/banner_shadow_black.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;
+    background-size: contain; */
     height: 60vh;
     display: flex; 
     flex-direction: column;
@@ -700,7 +701,7 @@ p.footer-p-25 {
     }   
     .sixth-section {
         justify-content: space-around;
-        background-image: url('../images/banner_black_ewo.png');
+        /*background-image: url('../images/banner_black_ewo.png');*/
     }
     .third-section-services-heading h2 {
         font-size: 2.7rem;
