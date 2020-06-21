@@ -323,7 +323,8 @@ owl.on('changed.owl.carousel', function(event) {
             if( name=='dataTopBottom' && direction=='down') return // ignorisemo bottom ako ide dolje
             if( name=='data20Top' && direction=='up') return 
             if( name=='dataTop' && direction=='up') return 
-            if (element.classList.contains('fourth-section') && (window.innerHeight<768) ) return
+            //if (element.classList.contains('fourth-section') && 
+            //if (window.innerHeight<768)  return
             var clas = (element && element.dataset)?element.dataset.menu:null;
             //console.log('menu class:', clas, element.id, name, direction, element )
             if (!clas) return
