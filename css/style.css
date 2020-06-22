@@ -378,17 +378,16 @@ p.footer-p-25 {
 }
 .third-section-services-heading h2 {
     font-size: 3vw;
-    line-height: 16vw;
 }
 .bt-pink {
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
     margin-bottom: 2rem;
     margin-left:0 !important;
     /*width: 96%;
     text-align:left !important;*/
 }
 .bt-grey {
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
     margin-bottom: 2rem;
     margin-left:0 !important;
 }
