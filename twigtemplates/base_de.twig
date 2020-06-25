@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%">
+<html lang="de" style="height: 100%">
     <head>
         <base href="{{_BASE}}">
         <title>The creativework co.</title>
@@ -29,52 +29,31 @@
 
         <nav class="fixed-top" >
 
-           <!-- <a class="" href="#">Animacija</a> -->
             {% set c = (_GET[0] in ['','index']) ?'255':'0' %}
             <ul class="navigation d-flex mb-0 font-weight-bold" id="menu">
                 <li class="d-inline " style="flex:1">
-                    <!--
-                    <a href="index" style="display:inline-block; position:relative" class="nav-link font-weight-bold" >
-                    <span
-                        data-0="display:!inline;"
-                        data-20="display:!none;"                    
-                    >the creativework co.</span>
-                    <span
-                        data-0="display:!none;"
-                        data-20="display:!inline;"                       
-                    >
-                    </span>
-                        <div style="position:absolute; left:0; top:0; right:0; bottom:0; 
-                        background: linear-gradient(90deg, rgba({{c}},{{c}},{{c}},0) 0%, rgba({{c}},{{c}},{{c}},1) 100%);"
-                        data-0="background: linear-gradient(0deg, rgba({{c}},{{c}},{{c}},0) 90%, rgba({{c}},{{c}},{{c}},1) 100%);"
-                        data-20="background: linear-gradient(0deg, rgba({{c}},{{c}},{{c}},0) 0%, rgba({{c}},{{c}},{{c}},1) 10%);"
-                        data-40="background: linear-gradient(0deg, rgba({{c}},{{c}},{{c}},0) 100%, rgba({{c}},{{c}},{{c}},1) 100%);"
-                        > 
-                        </div>
-                    </a>
-                    -->
-                    <a href="index" style="display:inline-block; position:relative" class="nav-link font-weight-bold" >
+                    <a href="index_de" style="display:inline-block; position:relative" class="nav-link font-weight-bold" >
                         <span class="d-none d-md-inline">the creativework co.</span>
                         <span class="d-inline d-md-none">tc.</span>
                     </a>
                 </li>
                 <li class="d-inline ">
-                    <a class="nav-link" href="{{_GET[0] in ['','index']? '#projects': 'index#projects'}}">Projects</a> 
+                    <a class="nav-link" href="{{_GET[0] in ['','index_de']? '#projects': 'index_de#projects'}}">Projekte</a> 
                 </li>
                 <li class="d-inline">
-                    <a class="nav-link" href="services">Services</a>
+                    <a class="nav-link" href="services_de">Leistungen</a>
                 </li>
                 <li class="d-inline">
-                    <a class="nav-link" href="javascript:function() { return false; }" style="margin-right:-1rem;">EN</a> 
+                    <a class="nav-link" href="{{(_GET[0]??'index')|slice(0, -3)}}" style="margin-right:-1rem;">EN</a> 
                 </li>
                 <li class="d-inline">
                     <spam class="nav-link">/</span>
                 </li>
                 <li class="d-inline">
-                    <a class="nav-link" href="{{_GET[0]??'index'}}_de" style="margin-left:-1rem;">DE</a>
+                    <a class="nav-link" href="javascript:function() { return false; }" style="margin-left:-1rem;">DE</a>
                 </li>
                 <li class="d-inline">
-                    <a class="nav-link" href="{{_GET[0] in ['','index']? '#contact': 'index#contact'}}">Contact</a>
+                    <a class="nav-link" href="{{_GET[0] in ['','index_de']? '#contact': 'index_de#contact'}}">Kontakt</a>
                 </li>
 
             </ul>

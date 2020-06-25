@@ -1,4 +1,4 @@
-{% extends "base.twig" %}
+{% extends "base_de.twig" %}
 
 {% block content %}
 
@@ -30,15 +30,15 @@
                 data-bottom-top="opacity[swing]:0; transform:translateY(150px)"
                 data-center="opacity[swing]:1; transform:translateY(0px)"
                 data-top-center="opacity[swing]:0">
-                Your agency for
+                Deine Agentur für   
             </h2>
             <h2 class="scnd-section-text white font-weight-bold"
                 data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
                 data-center="opacity[swing]:1; transform:translateY(0px)"
                 data-top-center="opacity[swing]:0;">
-                branding <br class="d-md-none">
-                and <br class="d-md-none">
-                web design
+                Branding <br class="d-md-none">
+                und <br class="d-md-none">
+                Web-Design
             </h2>
         </div>
     </div>
@@ -75,7 +75,7 @@ end second section -->
                         data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                     
                         >
-                            Welcome to <br> 
+                            Willkommen bei<br> 
                         <b
                         data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
                         data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
@@ -93,15 +93,15 @@ end second section -->
                     data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
                     data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                 >
-                    We are a collective with diverse backgrounds that comes together to bring our best into each of our projects. 
-                    We are designers, developers, photographers, artists and business people. We connect the dots between nice colors 
-                    and their effectiveness for your company.
+                    Wir sind eine digitale Marketing Agentur, die Marken zum Leben erweckt. 
+                    Wir erstellen Webseiten und entwickeln Kommunikationsstrategien für unsere Kunden rund um den Globus.
                 </p>
                 <p
                     data-bottom="opacity:0; transform: translate3d(-10px, 10px, 0);"
                     data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                 >
-                    Our clients. Start ups, established businesses, shops, bars & restaurants, freelancers, NGO's and publish institutions.
+                   Unsere Kunden, vom Start Up bis hin zum großen Unternehmen. Wir lieben es mit allen zu arbeiten, 
+                   genauso mit Freiberuflern, Einzelhändlern, Hotels, Restaurants und Vereinen. Jeder hat seine eigene individuelle Geschichte zu erzählen. 
                 </p>
                 </div>
             </div>
@@ -112,19 +112,22 @@ end second section -->
                     data--20p-bottom="opacity:0; transform: translate3d(10px, 10px, 0);" 
                     data--25p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);"  
                 >
-                    Together with our collective we've fulfilled projects all around the world, 
-                    including places like London, Den Haag, Frankfurt, Cologne, Belgrade, Dubai, Abu Dhabi and Seoul.
+                    Zusammen ändern wir die Spielregeln und bauen eine nachhaltige Marke auf.
+                    Unser Kollektiv hat bereits Projekte in 
+                        <span
+                            data--25p-bottom="color: rgb(126, 126, 126);" 
+                            data--40p-bottom="color: rgb(218, 98, 138)"  
+                            >
+                            Abu Dhabi, Belgrad, Den Haag, Doha, Dubai, Köln, London oder Seoul 
+                        </span>
+                    betreut. 
                 </p>
                 <p
                     data-bottom="opacity:0;"
                     data--20p-bottom="opacity:0; transform: translate3d(10px, 10px, 0);" 
                     data--25p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                 >
-                    The branding and web design agency that lets your business look great. Based in 
-                    <span
-                    data--25p-bottom="color: rgb(126, 126, 126);" 
-                    data--40p-bottom="color: rgb(218, 98, 138)"  
-                        >Munich, Cologne, Belgrade and Dubai.</span>
+                    Let’s bring your brand to life!
                 </p>
             </div>       
         </div>
@@ -132,10 +135,9 @@ end second section -->
 
 <!-- end third section -->
 
-<!-- fourth section -->
-    {% include 'portfolio.twig' %}
+<!-- fourth section - Projekti -->
+    {% include 'portfolio_de.twig' %}
 <!-- end fourth section -->
-
 
 <!-- sixth section -->
     <div class="container-fluid sixth-section white">
@@ -156,8 +158,9 @@ end second section -->
         </div>
     </div>
 <!-- end sixth section -->
+
 <!-- footer -->
-    {% include 'footer.twig' with {'boja' : '#DA628A'}  %}
+    {% include 'footer_de.twig' with {'boja' : '#DA628A'}  %}
 <!-- end footer -->
 </div>
 
@@ -239,21 +242,6 @@ owl.on('changed.owl.carousel', function(event) {
 
 })
 
-</script>
-
-
-
-<script>
-
-/*
-    var hash = document.location.hash
-    if (hash) {
-        hash = hash.substr(1)
-        var link = document.getElementById(hash);
-        skrollr.menu.click(link);    
-        console.log('scrolled to ', hash, link)
-    }
-     */
 </script>
 
 {% endblock %}
