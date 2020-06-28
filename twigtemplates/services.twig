@@ -34,8 +34,8 @@
                     data--10p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);"  
                 >
                     We’ll support you in building or re-launching your brand. From logo design and stationary, to packaging and web design. 
-                    We're also in for a whole branding strategy, managing it all the way, from the blank page to the moment we can proudly hand out 
-                    your new brand book.
+                    We're also in for a whole branding strategy, managing it all the way, from the blank page to the moment we can proudly 
+                    hand out your new brand book.
                 </p>
             </div>
             <div class="col-12">
@@ -67,6 +67,8 @@
     <div class="container-fluid third-section-services white"
         data-top="" data-top-bottom="" data-emit-events data-menu="lite">
 
+        {% set What_we_do = fetch("What_we_do") %}
+        {% for item in What_we_do %}
         <div class="row pb-4">
             <div class="col-12 col-md-5 white">
                 <img src="images/roze-linija.svg" 
@@ -82,7 +84,7 @@
                     data--25p-bottom="opacity:1;" 
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;">
-                    Branding
+                    {{item.Title}}
                 </h3>
             </div>
             <div class="col-12 col-md-7 white">
@@ -100,7 +102,7 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    We let your business look great, digitally and the classic way.
+                   {{item.Paragraph_1}}
                 </p>
                 <p class=""
                     data-bottom="opacity:0;"
@@ -108,12 +110,13 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Brand strategy, brand identity, logo design, font design and development, corporate identity, branding
-                    guidelines, brand books.
+                    {{item.Paragraph_2}}
                 </p>
             </div>
         </div>
-        <div class="row py-4">
+        {% endfor %}
+
+        {#<!--<div class="row py-4">
             <div class="col-12 col-md-5 white">
                 <img src="images/roze-linija.svg" 
                     style="width:100%; height:2px;"
@@ -346,7 +349,7 @@
                     Retail consulting, start-up consulting, market analysis, trend analysis, employee training, workshops.
                 </p>
             </div>
-        </div>
+        </div>--> #}
 
     </div>
 <!-- end third section -->
@@ -368,6 +371,9 @@
     </div>
     <div class="container-fluid fourth-section-services-2 bg-white"
         data-top="" data-top-bottom="" data-emit-events data-menu="dark" >
+
+        {% set We_work_with = fetch("We_work_with") %}
+        {% for item in We_work_with %}
         <div class="row py-4">
             <div class="col-12 col-md-5">
                 <img src="images/plava-linija.png"
@@ -383,7 +389,7 @@
                     data--25p-bottom="opacity:1;" 
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;">
-                        Startups
+                        {{item.Title}}
                 </h3>
             </div>
             <div class="col-12 col-md-7">
@@ -401,12 +407,12 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Having started ourselves at some point, we know about the hazzle it can be. We offer special packages
-                    for young companies to make sure you can present your ideas to the world.
+                    {{item.Paragraph_1}}
                 </p>
             </div>
         </div>
-        <div class="row py-4" data-top="" data-top-bottom="" data-emit-events data-menu="dark" >
+        {% endfor %}
+        {# <div class="row py-4" data-top="" data-top-bottom="" data-emit-events data-menu="dark" >
             <div class="col-12 col-md-5">
                 <img src="images/plava-linija.png"
                     style="width:100%; height:1px;"                    
@@ -557,7 +563,7 @@
                     online and offline.
                 </p>
             </div>
-        </div>
+        </div> #}
 
     </div>
 <!-- end fourth section -->

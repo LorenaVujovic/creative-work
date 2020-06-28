@@ -67,7 +67,8 @@
     </div>
     <div class="container-fluid third-section-services white"
         data-top="" data-top-bottom="" data-emit-events data-menu="lite">
-
+        {% set Wir_machen = fetch("Wir_machen") %}
+        {% for item in Wir_machen %}
         <div class="row pb-4">
             <div class="col-12 col-md-5 white">
                 <img src="images/roze-linija.svg" 
@@ -83,7 +84,7 @@
                     data--25p-bottom="opacity:1;" 
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;">
-                    Strategie
+                    {{item.Title}}
                 </h3>
             </div>
             <div class="col-12 col-md-7 white">
@@ -101,8 +102,7 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Lasst uns die Message definieren, die eure Marke aussagen soll. Deutlich, verständlich und auf den Punkt. 
-                    Wir definieren gemeinsam die Ziele um eure Marke im richtigen Markt und für die richtige Zielgruppe zu positionieren.
+                    {{item.Paragraph_1}}
                 </p>
                 <p class=""
                     data-bottom="opacity:0;"
@@ -110,12 +110,13 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Wir machen Sachen wie: Marktforschung, Markenstrategie, Markenpositionierung, Namensfindung &amp; Claim
+                    {{item.Paragraph_2}}
                 </p>
             </div>
         </div>
+        {% endfor %}
 
-        <div class="row pb-4">
+        {#<!--<div class="row pb-4">
             <div class="col-12 col-md-5 white">
                 <img src="images/roze-linija.svg" 
                     style="width:100%; height:2px;"
@@ -349,7 +350,7 @@
                     Wir machen Sachen wie: Einzelhandelsberatung, Start Up Beratung, Marktanalysen, Trendanalysen, Mitarbeiterschulungen &amp; Workshops
                 </p>
             </div>
-        </div>
+        </div>--> #}
 
     </div>
 <!-- end third section -->
@@ -363,14 +364,17 @@
                     data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
                     data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
                 >
-                    <span class="weight-ch">We love</span> <br class="d-md-none">
-                    <span class="font-weight-bold"> to work with</span>
+                    <span class="weight-ch"></span> <br class="d-md-none">
+                    <span class="font-weight-bold">Wir arbeiten mit</span>
                 </h2>
             </div>
         </div>
     </div>
     <div class="container-fluid fourth-section-services-2 bg-white"
         data-top="" data-top-bottom="" data-emit-events data-menu="dark" >
+
+        {% set Wir_arbeiten_mit = fetch("Wir_arbeiten_mit") %}
+        {% for item in Wir_arbeiten_mit %}
         <div class="row py-4">
             <div class="col-12 col-md-5">
                 <img src="images/plava-linija.png"
@@ -386,7 +390,7 @@
                     data--25p-bottom="opacity:1;" 
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;">
-                        Startups
+                        {{item.Title}}
                 </h3>
             </div>
             <div class="col-12 col-md-7">
@@ -404,12 +408,13 @@
                     data-25p-top="opacity:1;" 
                     data-top="opacity:0;"
                 >
-                    Auch wir haben irgendwann mal angefangen und wissen wie viel Arbeit das sein kann. Wir bieten euch spezielle Gründerpakete an, 
-                    so dass ihr die Möglichkeit bekommt, eure Idee der Welt zu präsentieren.
+                    {{item.Paragraph_1}}
                 </p>
             </div>
         </div>
-        <div class="row py-4" data-top="" data-top-bottom="" data-emit-events data-menu="dark" >
+        {% endfor %}
+        
+        {#<div class="row py-4" data-top="" data-top-bottom="" data-emit-events data-menu="dark" >
             <div class="col-12 col-md-5">
                 <img src="images/plava-linija.png"
                     style="width:100%; height:1px;"                    
@@ -599,7 +604,7 @@
                     wir unterstützen euch dabei, euren Verein nach Außen zu präsentieren und viele Menschen auf eure tollen Aktionen aufmerksam zu machen.
                 </p>
             </div>
-        </div>
+        </div>#}
 
     </div>
 <!-- end fourth section -->

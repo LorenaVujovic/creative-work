@@ -1,0 +1,141 @@
+{% extends "base_de.twig" %}
+{% block content %}
+<div id="skrollr-body">
+
+    <!-- first section -->
+    <div class="container-fluid first-section-legal white"
+    data-top="" data-top-bottom="" data-emit-events data-menu="lite">
+        <div class="row" style="">
+            <!--
+            background-image: url(images/the_creativework_co.svg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            -->
+            <div class="col-12 text-center">
+                <h1 class="py-md-5 font-weight-bold"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+                >Privacy Policy</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-6 offset-md-3 text-center">
+                <p class="py-5"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+                    data--85p-bottom-top="opacity:1;" 
+                    data--100p-bottom-top="opacity:0;" 
+                >
+                    Contact<br>
+                    <a href="mailto:aloha@thecreativework.co" class="white">E-Mail: aloha@thecreativework.co</a>
+                </p>
+                <p class="pb-5"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+                    data--85p-bottom-top="opacity:1;" 
+                    data--100p-bottom-top="opacity:0;" 
+                >
+                information pursuant to German § 5 TMG & responsible <br> 
+                for the content according to German § 55(2) RStV
+                </p>
+                <p class="pb-5"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+                    data--85p-bottom-top="opacity:1;" 
+                    data--100p-bottom-top="opacity:0;" 
+                >
+                Falk & Isakovic GbR <br>
+                </p>
+                <p class="text-center pb-5"
+                    data-bottom-top="opacity:0;"
+                    data--25p-bottom-top="opacity:1;" 
+                    data--85p-bottom-top="opacity:1;" 
+                    data--100p-bottom-top="opacity:0;" 
+                >
+                    Dragan Isakovic <br> 
+                    the creativework co. <br>
+                    Brantstraße 6 <br> 
+                    80687 München
+                </p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <!-- end first section -->
+
+    {% set Privacy_Deutsch = fetch("Privacy_Deutsch") %}
+    {% for item in Privacy_Deutsch %}
+        <!-- second section -->
+            <div class="container-fluid section-legal-{{ cycle(['2', '2', '2'], loop.index0) }} d-flex flex-column justify-content-center"
+            data-top="" data-top-bottom="" data-emit-events data-menu="{{cycle(['lite', 'lite', 'lite'], loop.index0)}}">
+                <div class="row" style="">
+                    <div class="col col-md-6 offset-md-3 pt-5 px-5">
+                        {% if item.Small_Title != '' %}
+                        <h5 class="font-weight-bold pb-5"
+                            data-bottom-top="opacity:0;"
+                            data--25p-bottom-top="opacity:1;" 
+                            data-35p-top-bottom="opacity:1;" 
+                            data-60-top-bottom="opacity:0;"                   
+                        >{{item.Small_Title}}</h5>   
+                        {% endif %}                 
+                        <h2 class="font-weight-bold pb-5"
+                            data-bottom-top="opacity:0;"
+                            data--25p-bottom-top="opacity:1;" 
+                            data-35p-top-bottom="opacity:1;" 
+                            data-60-top-bottom="opacity:0;"                   
+                        >{{item.Title | raw}}</h2>
+                        <p class="pb-4"
+                            style="white-space: pre-wrap; word-wrap: break-word;"
+                            data-bottom-top="opacity:0;"
+                            data--25p-bottom-top="opacity:1;" 
+                            data-35p-top-bottom="opacity:1;" 
+                            data-60-top-bottom="opacity:0;"                   
+                        >{{item.Text}}</p>                
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        <!-- end second section -->
+    {% endfor %}
+
+    <!-- footer -->
+        {% include 'footer.twig' with {'boja' : '#79B2C6'}  %}
+    <!-- end footer -->
+</div>
+
+<script>
+window.addEventListener('load', function() {
+    var menu = document.getElementById("menu")
+    var s = skrollr.init({
+        forceHeight:false
+        , keyframe: function(element, name, direction) {
+            if( name=='dataTopBottom' && direction=='down') return // ignorisemo bottom ako ide dolje
+            if( name=='data20Top' && direction=='up') return 
+            if( name=='dataTop' && direction=='up') return 
+            if (element.classList.contains('fourth-section') && (window.innerHeight<768) ) return
+            var clas = (element && element.dataset)?element.dataset.menu:null;
+            //console.log('menu class:', clas, element.id, name, direction, element )
+            if (!clas) return
+            menu.classList.remove('lite'); 
+            menu.classList.remove('dark');
+            menu.classList.add(clas);
+        }
+       // , skrollrBody:'projects'
+    });
+    skrollr.menu.init(s, {
+        //skrollr will smoothly animate to the new position using `animateTo`.
+        animate: true,
+        //The easing function to use.
+    //    easing: 'sqrt',
+
+        //Multiply your data-[offset] values so they match those set in skrollr.init
+    //	scale: 2,
+
+        //Add hash link (e.g. `#foo`) to URL or not.
+      //  updateUrl: false //defaults to `true`.
+    });    
+
+})
+</script>
+{% endblock %}
