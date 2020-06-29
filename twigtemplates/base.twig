@@ -65,6 +65,9 @@
                     <a class="nav-link" href="services">Services</a>
                 </li>
                 <li class="d-inline">
+                    <a class="nav-link" href="{{_GET[0] in ['','index']? '#contact': 'index#contact'}}">Contact</a>
+                </li>
+                <li class="d-inline">
                     <a class="nav-link" href="javascript:function() { return false; }" style="margin-right:-1rem;">EN</a> 
                 </li>
                 <li class="d-inline">
@@ -73,10 +76,6 @@
                 <li class="d-inline">
                     <a class="nav-link" href="{{_GET[0]??'index'}}_de" style="margin-left:-1rem;">DE</a>
                 </li>
-                <li class="d-inline">
-                    <a class="nav-link" href="{{_GET[0] in ['','index']? '#contact': 'index#contact'}}">Contact</a>
-                </li>
-
             </ul>
   
         </nav>

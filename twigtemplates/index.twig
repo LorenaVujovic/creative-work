@@ -2,22 +2,6 @@
 
 {% block content %}
 
-<!--<div class="spacer"> spacer</div>
-
-<div class="section-1"
-      data-0="position: !static; "
-      
-     >
-  <h1 style="text-align:center;"
-      data-200p="opacity: 0;"
-      data-250p="opacity: 1;"
-      data-300p="opacity: 0"
-      data-center-bottom="opacity: 1;"
-      data-bottom="opacity: 0;"    
-      >Prvi text</h1>
-   </div>
-
-<div class="spacer"> spacer</div>-->
 <div id="skrollr-body">
 
 {% include 'intro.twig' %}
@@ -42,34 +26,14 @@
             </h2>
         </div>
     </div>
-<!--
-    <div class="container-fluid d-flex flex-column d-md-none" style="height: 100vh;" id="agency"
-            data-top="" data-top-bottom="" data-emit-events data-menu="lite" >
-        <div class="d-flex flex-column justify-content-center align-items-start px-4" style="height: 100%;">
-            <h2 class="scnd-section-text white font-weight-normal" 
-                data-bottom-top="opacity[swing]:0; transform:translateY(150px)"
-                data-center="opacity[swing]:1; transform:translateY(0px)"
-                data-top-center="opacity[swing]:0">
-                Your agency for
-            </h2>
-            <h2 class="scnd-section-text white font-weight-bold"
-                data-bottom-top="opacity[swing]:0; transform:translateY(200px)"
-                data-center="opacity[swing]:1; transform:translateY(0px)"
-                data-top-center="opacity[swing]:0;">
-                branding <br>
-                and <br>
-                web design
-            </h2>
-        </div>
-    </div>
-end second section -->
+<!-- end second section -->
 
 <!-- third section -->
     <div class="third-section padding container-fluid bg-white d-flex flex-column justify-content-center"  style="color: #555454;"
         data-top="" data-top-bottom="" data-emit-events data-menu="dark">
         <div class="row align-items-top" style="">
             <div class="col-12 col-md-6">
-                <div class="my-auto wo">
+                <div class="my-auto wo d-flex flex-column justify-content-center">
                     <h3 class="positioning-sm py-md-4 pt-sm-5"
                         data-bottom="opacity:0; transform: translate3d(-15px, 10px, 0);"
                         data--7p-bottom="opacity:1; transform: translate3d(0px, 0px, 0);" 
@@ -156,9 +120,11 @@ end second section -->
         </div>
     </div>
 <!-- end sixth section -->
+
 <!-- footer -->
     {% include 'footer.twig' with {'boja' : '#DA628A'}  %}
 <!-- end footer -->
+
 </div>
 
 <style>

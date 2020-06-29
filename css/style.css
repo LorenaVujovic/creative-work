@@ -259,10 +259,6 @@ h2.scnd-section-text {
 }
 .frame1-text-padd {
     padding: 6vw !important;
-    /*background-image: url(../images/banner-dark-short.png);
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat;*/
 }
 .frame1-text-padd-2 {
     padding: 5vw 5vw 0 5vw !important;
@@ -581,10 +577,6 @@ p.footer-p-25 {
     .frame1-text-padd-2 {
         padding: 3rem 2rem 1rem !important;
     }
-    .frame1-text-padd {
-        background-image: url('../images/bg-banner-black-mob-1.png');
-        background-position-y: -40%;
-    }
     .pt-sm-5 {
         padding-top: 1.5rem;
     } 
@@ -673,7 +665,7 @@ p.footer-p-25 {
     }
 
     .wo {
-        height: 20vh;
+        height: 24vh;
         width: 100vw;
         margin-left: -2.2rem;
         background-image: url(../images/wo.png);
@@ -706,11 +698,13 @@ p.footer-p-25 {
     }
     .third-section-services-heading h2 {
         font-size: 2.7rem;
-        line-height: 17vw;
+        line-height: 8vw;
     }
     .fourth-bg-text h2 {
         font-size: 2.7rem;
-        line-height: 10vw;
+        line-height: 6vw;
+        position: relative;
+        top: 8%;
     }
     .fourth-bg-text {
         background-image: unset;
@@ -718,7 +712,7 @@ p.footer-p-25 {
     }
     .we-love, .we-do {
         background-image: unset;  /**/
-        height: 30vw;
+        height: unset;
     }
     .bg-services-dark-heading-1 {
         background-image: unset;
@@ -734,12 +728,12 @@ p.footer-p-25 {
         height: 100%;
     }
     .we-love {
-        background-image: url('../images/crea-banner-mob.png');  /**/
+        background-image: url(../images/crea-banner-mob.png);
         background-repeat: no-repeat;
         background-position-x: -3vw;
-        background-position-y: 4vh;
+        background-position-y: -8vh;
         background-size: 103%;
-        height: 56vw;
+        height: unset;
     }
     .we-do {
         background-image: url('../images/cre-grey.png');  /**/
@@ -755,6 +749,19 @@ p.footer-p-25 {
     .px-sm-0 {
         padding-left: 0;
         padding-right: 0;
+    }
+    .fourth-bg-text h2 {
+        font-size: 2.7rem;
+        line-height: 10vw;
+        position: relative;
+        top: 8%;
+    }
+    .third-section-services-heading h2 {
+        font-size: 2.7rem;
+        line-height: 17vw;
+    }
+    .third-section.padding {
+        padding: 0vw 10vw 9vw;
     }
 }
 @media only screen and (max-width: 567px) {

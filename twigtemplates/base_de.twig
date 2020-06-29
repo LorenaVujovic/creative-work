@@ -44,6 +44,9 @@
                     <a class="nav-link" href="services_de">Leistungen</a>
                 </li>
                 <li class="d-inline">
+                    <a class="nav-link" href="{{_GET[0] in ['','index_de']? '#contact': 'index_de#contact'}}">Kontakt</a>
+                </li>
+                <li class="d-inline">
                     <a class="nav-link" href="{{(_GET[0]??'index')|slice(0, -3)}}" style="margin-right:-1rem;">EN</a> 
                 </li>
                 <li class="d-inline">
@@ -52,10 +55,6 @@
                 <li class="d-inline">
                     <a class="nav-link" href="javascript:function() { return false; }" style="margin-left:-1rem;">DE</a>
                 </li>
-                <li class="d-inline">
-                    <a class="nav-link" href="{{_GET[0] in ['','index_de']? '#contact': 'index_de#contact'}}">Kontakt</a>
-                </li>
-
             </ul>
   
         </nav>
