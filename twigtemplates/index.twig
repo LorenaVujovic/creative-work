@@ -163,7 +163,7 @@ window.addEventListener('load', function() {
         nav:true,
         items:1,
         smartSpeed:450,
-        touchDrag: false,
+        //touchDrag: false,
          navText: ["<img src='images/purple_line.png'>",'<span id="navnumber">1</span>']
     })
     ;
@@ -171,6 +171,29 @@ owl.on('changed.owl.carousel', function(event) {
     console.log(event)
     window.document.getElementById('navnumber').innerHTML = event.item.index+1
 })
+
+var prevent_skrollr_render=false
+var scrollTop
+owl.on('drag.owl.carousel', function(event) {
+    console.log('drag.owl.carousel',event)
+    prevent_skrollr_render=true
+    scrollTop = s.getScrollTop()
+    return false
+})
+owl.on('dragged.owl.carousel', function(event) {
+    console.log('draged.owl.carousel',event)
+    //prevent_skrollr_render=false
+    return false
+})
+owl.on('translated.owl.carousel', function(event) {
+    console.log('translated.owl.carousel',event)
+    prevent_skrollr_render=false
+    s.setScrollTop(scrollTop, true)
+
+    return false
+})
+
+
 
     var menu = document.getElementById("menu")
     var s = skrollr.init({
@@ -202,6 +225,10 @@ owl.on('changed.owl.carousel', function(event) {
         //Add hash link (e.g. `#foo`) to URL or not.
       //  updateUrl: false //defaults to `true`.
     });    
+    s.on('beforerender', function(o){
+      //console.log('beforerender', o)
+      if (prevent_skrollr_render) return false
+    })
 
 })
 
