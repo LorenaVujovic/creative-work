@@ -725,6 +725,7 @@ p.footer-p-25 {
     }
     .fourth-bg-text {
         background-image: unset;
+        padding: 5.5vw 0vw 9.5vw 10vw !important;
         height: 100%;
     }
     .we-love {
