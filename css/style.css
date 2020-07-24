@@ -649,12 +649,19 @@ p.footer-p-25 {
         align-items: flex-start;
         width:96%;
     }
+    .second-section-services {
+        min-height: 76vh;
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
     .weight-ch {
         font-weight: normal !important;
     }
     .serv-your {
-        font-size: calc(1.8rem + 6 * ((100vw - 320px) / 680));
-        line-height: calc(2rem + 6 * ((100vw - 320px) / 680));
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+        margin-bottom: 2rem;
+        margin-top: -0.5rem;
     }
     .fourth-section-services-2 {
         margin-top: -1px;
@@ -802,7 +809,11 @@ p.footer-p-25 {
         margin-bottom: -3rem;
     }
 } 
-
+@media only screen and (max-width: 376px) {
+    .second-section-services {
+        min-height: 80vh;
+    }
+}
 @media only screen and (max-width: 372px) {
     a.footer-link {
         font-size:10px;
@@ -820,7 +831,7 @@ p.footer-p-25 {
         line-height: 39px;
     }
     .second-section-services {
-        min-height: 76vh;
+        min-height: 114vh;
     }
 }
 /* nav color change */
