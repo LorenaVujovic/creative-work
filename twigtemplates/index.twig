@@ -188,7 +188,7 @@ owl.on('dragged.owl.carousel', function(event) {
 owl.on('translated.owl.carousel', function(event) {
     console.log('translated.owl.carousel',event)
     prevent_skrollr_render=false
-    s.setScrollTop(scrollTop, true)
+    if (scrollTop) s.setScrollTop(scrollTop, true)
 
     return false
 })
